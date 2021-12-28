@@ -23,7 +23,7 @@ MonoBehaviour:
     min: 0
     max: 1
   geometryPushbackEnabled:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   geometryPushbackMinMax:
     m_OverrideState: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   drawDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 100
     min: 0
 --- !u!114 &11400000
@@ -83,6 +83,7 @@ MonoBehaviour:
   - {fileID: 5663832548335604930}
   - {fileID: 522554132318595007}
   - {fileID: -4447853505334135194}
+  - {fileID: 1378668228362768877}
 --- !u!114 &522554132318595007
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -102,7 +103,7 @@ MonoBehaviour:
     m_Value: 0
   bloom:
     m_OverrideState: 1
-    m_Value: 0.0625
+    m_Value: 0.085
     min: 0
     max: 1
   grateMaskMode:
@@ -169,6 +170,127 @@ MonoBehaviour:
     m_Value: 0.5
     min: 0
     max: 1
+--- !u!114 &1378668228362768877
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96575ff06efbe184aa6c6f9f90b4aab9, type: 3}
+  m_Name: FogVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  isEnabled:
+    m_OverrideState: 1
+    m_Value: 1
+  fogFalloffMode:
+    m_OverrideState: 0
+    m_Value: 0
+  blendMode:
+    m_OverrideState: 0
+    m_Value: 0
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  precisionAlpha:
+    m_OverrideState: 0
+    m_Value: 1
+  precisionAlphaDitherTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 2800000, guid: 4a3e96c03e7d7c34a8fb8f59764f1945, type: 3}
+  precisionAlphaDither:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  distanceMin:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  distanceMax:
+    m_OverrideState: 0
+    m_Value: 100
+    min: 0.00001
+  fogFalloffCurve:
+    m_OverrideState: 0
+    m_Value: 0
+    min: -1
+    max: 1
+  heightFalloffEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  heightFalloffMirrored:
+    m_OverrideState: 0
+    m_Value: 0
+  heightMin:
+    m_OverrideState: 0
+    m_Value: 0
+  heightMax:
+    m_OverrideState: 0
+    m_Value: 10
+  colorLUTMode:
+    m_OverrideState: 0
+    m_Value: 0
+  colorLUTTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  colorLUTRotationDegrees:
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0}
+  colorLUTWeight:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  colorLUTWeightLayer1:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 1
+  isAdditionalLayerEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  fogFalloffModeLayer1:
+    m_OverrideState: 0
+    m_Value: 0
+  colorLayer1:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  distanceMinLayer1:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  distanceMaxLayer1:
+    m_OverrideState: 0
+    m_Value: 100
+    min: 0.00001
+  fogFalloffCurveLayer1:
+    m_OverrideState: 0
+    m_Value: 0
+    min: -1
+    max: 1
+  heightFalloffEnabledLayer1:
+    m_OverrideState: 0
+    m_Value: 0
+  heightFalloffMirroredLayer1:
+    m_OverrideState: 0
+    m_Value: 0
+  heightMinLayer1:
+    m_OverrideState: 0
+    m_Value: 0
+  heightMaxLayer1:
+    m_OverrideState: 0
+    m_Value: 10
 --- !u!114 &5663832548335604930
 MonoBehaviour:
   m_ObjectHideFlags: 3

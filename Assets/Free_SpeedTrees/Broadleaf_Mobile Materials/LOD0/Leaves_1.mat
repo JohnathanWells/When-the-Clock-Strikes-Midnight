@@ -9,13 +9,14 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Leaves_1
   m_Shader: {fileID: 4800000, guid: 055eab4e84dc70a47ae75b3125a22de6, type: 3}
-  m_ShaderKeywords: EFFECT_BUMP EFFECT_HUE_VARIATION GEOM_TYPE_LEAF
-  m_LightmapFlags: 5
+  m_ShaderKeywords: _ALPHATEST_ON _BRDF_MODE_LAMBERT _FOG_ON _LIGHTING_BAKED_ON _LIGHTING_DYNAMIC_ON
+    _SHADING_EVALUATION_MODE_PER_VERTEX _TEXTURE_FILTER_MODE_TEXTURE_IMPORT_SETTINGS
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: TreeTransparentCutout
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -70,8 +71,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AffineTextureWarpingWeight: 1
-    - _AlphaClip: 0
-    - _AlphaClippingDitherIsEnabled: 0
+    - _AlphaClip: 1
+    - _AlphaClippingDitherIsEnabled: 1
     - _BRDFMode: 0
     - _Blend: 0
     - _BlendOp: 0
@@ -80,7 +81,7 @@ Material:
     - _Cutoff: 0.33
     - _DoubleSidedNormalMode: 0
     - _DrawDistanceOverrideMode: 0
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EmissionBakedMultiplier: 1
     - _FogWeight: 1
     - _LightingBaked: 1
@@ -95,16 +96,16 @@ Material:
     - _ReflectionDirectionMode: 0
     - _RenderQueueCategory: 0
     - _ShadingEvaluationMode: 0
-    - _SrcBlend: 1
-    - _Surface: 0
+    - _SrcBlend: 5
+    - _Surface: 1
     - _TextureFilterMode: 0
     - _UVAnimationMode: 0
     - _VertexColorBlendMode: 0
     - _VertexColorMode: 0
     - _WindQuality: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
-    - _AlphaClippingScaleBiasMinMax: {r: 1, g: 0, b: 0, a: 1}
+    - _AlphaClippingScaleBiasMinMax: {r: 2.2182302, g: -0, b: 0, a: 0.45080984}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
@@ -112,8 +113,8 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _PrecisionColorOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
-    - _PrecisionGeometryOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
+    - _PrecisionColorOverrideParameters: {r: 255, g: 0.003921569, b: 1, a: 0}
+    - _PrecisionGeometryOverrideParameters: {r: 1, g: 1, b: 0.00001, a: 0}
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVAnimationParameters: {r: 1, g: 1, b: 0, a: 0}
     - _UVAnimationParametersFrameLimit: {r: 0, g: 60, b: 0, a: 0}
