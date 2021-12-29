@@ -21,6 +21,7 @@ public class DayNightCycle : MonoBehaviour
     [Tooltip("The percentage that must pass in a clip before playing the next"), Range(0, 1)]
     public float blendPercentage = 1;
     public AudioClip[] bells;
+    public AudioClip[] lastBells;
     public AudioSource source;
     int currentHour = 0;
 
@@ -50,10 +51,10 @@ public class DayNightCycle : MonoBehaviour
             directionalLight.transform.rotation = Quaternion.Euler(directionalLightRotation);
 
             int newHour = Mathf.FloorToInt(startHour + ((timePassed / dayDuration) * (hoursInDay - startHour)));
-            Debug.Log(newHour);
 
             if (newHour != currentHour)
             {
+                Debug.Log(newHour);
                 currentHour = newHour;
                 RingBells();
             }
@@ -62,20 +63,33 @@ public class DayNightCycle : MonoBehaviour
 
     void RingBells()
     {
-        StartCoroutine(ringBells(currentHour + hoursInDay));
+        StartCoroutine(ringBells(currentHour));
     }
 
     IEnumerator ringBells(int times)
     {
-        source.Stop();
-
-        for (int n = 0; n < times; n++)
+        if (times > 0)
         {
-            int clipSelected = Random.Range(0, bells.Length);
-            //source.clip = bells[clipSelected];
-            //source.Play();
-            source.PlayOneShot(bells[clipSelected]);
-            yield return new WaitForSeconds(bells[clipSelected].length * blendPercentage);
+            Debug.Log(times);
+            source.Stop();
+            int n;
+
+            for (n = 0; n < times - 1; n++)
+            {
+                int clipSelected = Random.Range(0, bells.Length);
+                //source.clip = bells[clipSelected];
+                //source.Play();
+                source.PlayOneShot(bells[clipSelected]);
+                yield return new WaitForSecondsRealtime(bells[clipSelected].length * blendPercentage);
+            }
+
+            if (lastBells.Length > 0)
+            {
+                int clipSelected = Random.Range(0, lastBells.Length);
+                //source.clip = bells[clipSelected];
+                //source.Play();
+                source.PlayOneShot(lastBells[clipSelected]);
+            }
         }
 
     }
