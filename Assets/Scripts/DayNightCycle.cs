@@ -9,6 +9,9 @@ public class DayNightCycle : MonoBehaviour
     public Gradient fogColor;
     public float dayDuration = 12;
     public VolumeProfile sceneVolume;
+    public AnimationCurve xDirectionalRotation;
+    public Light directionalLight;
+    Vector3 directionalLightRotation;
     float timePassed = 0;
     HauntedPSX.RenderPipelines.PSX.Runtime.FogVolume fogControl;
 
@@ -20,17 +23,21 @@ public class DayNightCycle : MonoBehaviour
             Destroy(this);
         }
 
-
+        directionalLightRotation = directionalLight.transform.eulerAngles;
     }
 
     // Update is called once per frame
     void Update()
     {
-        fogControl.color.Override(fogColor.Evaluate(Mathf.InverseLerp(0, dayDuration, timePassed)));
+        fogControl.color.value = fogColor.Evaluate(Mathf.InverseLerp(0, dayDuration, timePassed));
 
         if (timePassed < dayDuration)
         {
             timePassed += Time.deltaTime;
+
+            directionalLightRotation.x = xDirectionalRotation.Evaluate(Mathf.Clamp(Mathf.InverseLerp(0, dayDuration, timePassed), 0, 1));
+
+            directionalLight.transform.rotation = Quaternion.Euler(directionalLightRotation);
         }
     }
 }
