@@ -6,6 +6,7 @@ public class SetupAnimation : MonoBehaviour
 {
     public Transform A;
     public Transform B;
+    public string subtractiveModifier;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class SetupAnimation : MonoBehaviour
 
         foreach (var b in B.GetComponentsInChildren<Transform>())
         {
-            BObjs.Add(b.name, b);
+            BObjs.Add(b.name + subtractiveModifier, b);
         }
 
         foreach (var a in AObjs)
