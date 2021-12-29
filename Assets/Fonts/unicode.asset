@@ -2655,8 +2655,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
         m_Texture: {fileID: 2800000, guid: daab7b07751e96d4e9d90722a3ecf3aa, type: 3}
-        m_Scale: {x: 1, y: 0.8}
-        m_Offset: {x: 0, y: 0.1}
+        m_Scale: {x: 1, y: 0.7}
+        m_Offset: {x: 0, y: 0.16}
     - _MainTex:
         m_Texture: {fileID: 2011222038404024076}
         m_Scale: {x: 1, y: 1}
@@ -2691,7 +2691,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.084
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333

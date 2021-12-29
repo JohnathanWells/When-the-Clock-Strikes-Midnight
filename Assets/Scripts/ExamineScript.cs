@@ -8,32 +8,25 @@ public class ExamineScript : MonoBehaviour
     public string[] messages;
     public int nextMessage = 0;
     public float messageCooldown = 1f;
-    float cooldownCount;
-
-    private void Update()
-    {
-        if (cooldownCount > 0)
-        {
-            cooldownCount -= Time.deltaTime;
-        }
-    }
+    float cooldownStamp = 0;
 
     public void RegisterInformation()
     {
-        if (cooldownCount <= 0)
+        if (cooldownStamp == Time.time || Time.time - cooldownStamp >= messageCooldown)
         {
             foreach (var i in informationDiscovered)
             {
                 MysteryManager.RegisterInformation(i);
             }
 
-            cooldownCount = messageCooldown;
+            cooldownStamp = Time.time;
+            //cooldownCount = messageCooldown;
         }
     }
 
     public void DisplayMessage()
     {
-        if (cooldownCount <= 0)
+        if (cooldownStamp == Time.time || Time.time - cooldownStamp >= messageCooldown)
         {
             SubtitleManager.Instance.DisplayMessage(messages[nextMessage]);
 
@@ -42,7 +35,8 @@ public class ExamineScript : MonoBehaviour
                 nextMessage++;
             }
 
-            cooldownCount = messageCooldown;
+            cooldownStamp = Time.time;
+            //cooldownCount = messageCooldown;
         }
     }
 }

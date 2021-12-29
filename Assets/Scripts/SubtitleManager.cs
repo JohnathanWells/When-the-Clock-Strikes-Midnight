@@ -12,7 +12,7 @@ public class SubtitleManager : MonoBehaviour
     public TextMeshProUGUI textDisplay;
     Coroutine currentWriteup;
     Queue<string> stringQueue = new Queue<string>();
-    bool displayingMessage;
+    bool displayingMessage = false;
     public UnityEngine.Events.UnityEvent OnMessageCleared;
 
     // Start is called before the first frame update
@@ -35,7 +35,10 @@ public class SubtitleManager : MonoBehaviour
         {
             if (!displayingMessage)
             {
-                ClearMessages();
+                if (currentWriteup != null)
+                    StopCoroutine(currentWriteup);
+                displayingMessage = false;
+
                 currentWriteup = StartCoroutine(writeMessage(msg));
             }
             else
@@ -62,6 +65,7 @@ public class SubtitleManager : MonoBehaviour
     {
         if (currentWriteup != null)
             StopCoroutine(currentWriteup);
+
         textDisplay.text = string.Empty;
         displayingMessage = false;
         OnMessageCleared.Invoke();
@@ -74,6 +78,7 @@ public class SubtitleManager : MonoBehaviour
 
     IEnumerator writeMessage(string msg, bool continueQueue = true)
     {
+        Debug.Log("Displaying");
         displayingMessage = true;
         int count = -1;
         string displayString = string.Empty;
@@ -101,5 +106,7 @@ public class SubtitleManager : MonoBehaviour
         {
             ContinueQueue();
         }
+
+        Debug.Log("Closing");
     }
 }

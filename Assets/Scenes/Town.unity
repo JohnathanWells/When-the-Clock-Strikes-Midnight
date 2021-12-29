@@ -5550,7 +5550,7 @@ GameObject:
   - component: {fileID: 176408303}
   - component: {fileID: 176408302}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Subtitles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5595,7 +5595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Lorem Ipsum
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 684029fc708c01d4689aec453cbb0590, type: 2}
   m_sharedMaterial: {fileID: 2859722610464574277, guid: 684029fc708c01d4689aec453cbb0590, type: 2}
@@ -5622,8 +5622,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.9
-  m_fontSizeBase: 44.9
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18042,7 +18042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &644520832
 RectTransform:
   m_ObjectHideFlags: 0
