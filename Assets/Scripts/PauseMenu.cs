@@ -10,7 +10,9 @@ public class PauseMenu : MonoBehaviour
     public UnityEngine.Events.UnityEvent OnUnPause;
     public Animator animator;
     public GameObject menu;
-
+    public Color onTextColor;
+    public Color offTextColor;
+    public bool lockPause = false;
 
     // Update is called once per frame
     void Update()
@@ -22,8 +24,27 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    void SetPause(bool to)
+    public void SneakyPause(bool to)
     {
+        if (lockPause)
+            return;
+
+        if (to)
+        {
+            lastSpeed = Time.timeScale;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = lastSpeed;
+        }
+    }
+
+    public void SetPause(bool to)
+    {
+        if (lockPause)
+            return;
+
         if (to)
         {
             lastSpeed = Time.timeScale;
@@ -44,6 +65,10 @@ public class PauseMenu : MonoBehaviour
 
     public void SetMenuShow(bool to)
     {
+
+        if (lockPause)
+            return;
+
         menu.SetActive(to);
         Cursor.visible = to;
 
@@ -53,20 +78,45 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         else
             Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
+    public void SetMenuShowSneaky(bool to)
+    {
+        if (lockPause)
+            return;
+
+        menu.SetActive(to);
     }
 
     public void ShowMenu()
     {
+        if (lockPause)
+            return;
+
         SetMenuShow(true);
     }
 
     public void HideMenu()
     {
+        if (lockPause)
+            return;
+
         SetMenuShow(false);
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void SetTextColorOn(TMPro.TextMeshProUGUI text)
+    {
+        text.color = onTextColor;
+    }
+
+    public void SetTextColorOff(TMPro.TextMeshProUGUI text)
+    {
+        text.color = offTextColor;
     }
 }

@@ -37,12 +37,11 @@ public class DayNightCycle : MonoBehaviour
         directionalLightRotation = directionalLight.transform.eulerAngles;
     }
 
-    // Update is called once per frame
     void Update()
     {
         fogControl.color.value = fogColor.Evaluate(Mathf.InverseLerp(0, dayDuration, timePassed));
 
-        if (timePassed < dayDuration)
+        if (timePassed < dayDuration && !MysteryManager.timeProgressStopped)
         {
             timePassed += Time.deltaTime;
 
@@ -54,7 +53,6 @@ public class DayNightCycle : MonoBehaviour
 
             if (newHour != currentHour)
             {
-                Debug.Log(newHour);
                 currentHour = newHour;
                 RingBells();
             }
@@ -70,8 +68,8 @@ public class DayNightCycle : MonoBehaviour
     {
         if (times > 0)
         {
-            Debug.Log(times);
             source.Stop();
+            
             int n;
 
             for (n = 0; n < times - 1; n++)

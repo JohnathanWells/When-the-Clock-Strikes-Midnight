@@ -51,12 +51,12 @@ MonoBehaviour:
     min: 0
     max: 1
   framebufferDither:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0.059
     min: 0
     max: 1
   ditherSize:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
     min: 1
     max: 8
@@ -225,7 +225,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   bloom:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
     min: 0
     max: 1
@@ -240,7 +240,7 @@ MonoBehaviour:
     m_Value: 0
   scanlineSharpness:
     m_OverrideState: 0
-    m_Value: 0.5
+    m_Value: 0
     min: 0
     max: 1
   imageSharpness:
@@ -290,7 +290,7 @@ MonoBehaviour:
     max: 1
   vignette:
     m_OverrideState: 0
-    m_Value: 0.438
+    m_Value: 0.534
     min: 0
     max: 1
 --- !u!114 &1378668228362768877
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.7905838, g: 0.7905838, b: 0.8867924, a: 1}
+    m_Value: {r: 0.7921569, g: 0.7921569, b: 0.8862745, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -334,11 +334,11 @@ MonoBehaviour:
     min: 0
     max: 1
   distanceMin:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
     min: 0
   distanceMax:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 49.26
     min: 0.00001
   fogFalloffCurve:

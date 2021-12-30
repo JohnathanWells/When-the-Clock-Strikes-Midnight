@@ -13,7 +13,21 @@ public class MysteryManager : MonoBehaviour
 
     public string[] possibleCulprits;
 
+
     public static Dictionary<string, int> facts = new Dictionary<string, int>();
+
+    static bool _timeProgressStopped = false;
+    public static bool timeProgressStopped
+    {
+        get
+        {
+            return _timeProgressStopped;
+        }
+        set
+        {
+            _timeProgressStopped = value;
+        }
+    }
 
     public void DecideCulprit()
     {
