@@ -26,12 +26,13 @@ public class CommunicationManager : MonoBehaviour
 	public void LoadSubject(CommunicationSubject subject)
     {
 		this.activeSubject = subject;
-		LoadConversation(activeSubject.conversation);
+		LoadConversation(activeSubject.story);
     }
 
-    public void LoadConversation(TextAsset asset)
+    public void LoadConversation(Story asset)
     {
-        activeConversation = new Story(asset.text);
+        activeConversation = asset;
+		LoadIntoStoryVariables(asset);
     }
 
     public void StartConversation()
@@ -106,7 +107,6 @@ public class CommunicationManager : MonoBehaviour
 	// When we click the choice button, tell the story to choose that choice!
 	void OnClickChoiceButton(Choice choice)
 	{
-		Debug.Log(choice.text);
 		activeConversation.ChooseChoiceIndex(choice.index);
 		DisplayText();
 	}
@@ -117,6 +117,35 @@ public class CommunicationManager : MonoBehaviour
 		for (int i = childCount - 1; i >= 0; --i)
 		{
 			GameObject.Destroy(decisionParent.transform.GetChild(i).gameObject);
+		}
+	}
+
+	public void EndIfEmpty()
+    {
+		if (!activeConversation.canContinue && activeConversation.currentChoices.Count == 0)
+			EndConversation();
+    }
+
+	public void LoadIntoStoryVariables(Story story)
+    {
+		foreach(System.Collections.Generic.KeyValuePair<string, int> s in MysteryManager.facts)
+        {
+			
+			if (story.variablesState.GlobalVariableExistsWithName(s.Key))
+            {
+				story.variablesState[s.Key] = s.Value;
+            }
+        }
+    }
+
+	public void LoadFromStoryVariables(Story story)
+    {
+		foreach (var s in story.variablesState)
+		{
+			if(MysteryManager.facts.ContainsKey(s))
+			{
+				MysteryManager.facts[s] = (int)story.variablesState[s];
+			}
 		}
 	}
 }

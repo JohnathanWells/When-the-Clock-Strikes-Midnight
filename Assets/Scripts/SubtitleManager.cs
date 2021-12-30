@@ -14,6 +14,8 @@ public class SubtitleManager : MonoBehaviour
     Queue<string> stringQueue = new Queue<string>();
     bool displayingMessage = false;
     public UnityEngine.Events.UnityEvent OnMessageCleared;
+    public UnityEngine.Events.UnityEvent OnMessageFinished;
+    public bool clearOnFinish = true;
 
     // Start is called before the first frame update
     void Start()
@@ -42,12 +44,16 @@ public class SubtitleManager : MonoBehaviour
                 currentWriteup = StartCoroutine(writeMessage(msg));
             }
             else
-            {
+            { 
                 if (!stringQueue.Contains(msg))
                     stringQueue.Enqueue(msg);
             }
         }
     }
+
+    /*
+     
+     */
 
     public void ContinueQueue()
     {
@@ -57,18 +63,23 @@ public class SubtitleManager : MonoBehaviour
         }
         else
         {
-            ClearMessages();
+            ClearMessages(clearOnFinish);
         }
     }
 
-    public void ClearMessages()
+    public void ClearMessages(bool clearText = true)
     {
         if (currentWriteup != null)
             StopCoroutine(currentWriteup);
 
-        textDisplay.text = string.Empty;
+        if (clearText)
+            textDisplay.text = string.Empty;
+        
         displayingMessage = false;
         OnMessageCleared.Invoke();
+
+        if (stringQueue.Count == 0)
+            OnMessageFinished.Invoke();
     }
 
     public void ClearQueue()
@@ -78,7 +89,6 @@ public class SubtitleManager : MonoBehaviour
 
     IEnumerator writeMessage(string msg, bool continueQueue = true)
     {
-        Debug.Log("Displaying");
         displayingMessage = true;
         int count = -1;
         string displayString = string.Empty;
@@ -100,13 +110,11 @@ public class SubtitleManager : MonoBehaviour
 
         yield return new WaitForSeconds(secondsBeforeDestruction);
 
-        ClearMessages();
+        ClearMessages(clearOnFinish);
 
         if (continueQueue && stringQueue.Count > 0)
         {
             ContinueQueue();
         }
-
-        Debug.Log("Closing");
     }
 }
