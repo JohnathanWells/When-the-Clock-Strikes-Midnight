@@ -362,6 +362,7 @@ MonoBehaviour:
   resultsFadeInTime: 1
   coverImage: {fileID: 265130997}
   correctAnswer: The Doctor
+  thereIsCorrectAnswer: 0
   victoryMessage: The demon is burned at the stake by the rest of the town. No one
     else dies that night.
   defeatMessage: The following morning, only widows, orphans, and empty buildings
@@ -397,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &265130997
 MonoBehaviour:
   m_ObjectHideFlags: 0

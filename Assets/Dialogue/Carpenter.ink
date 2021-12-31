@@ -1,1 +1,8 @@
+THIS CHARACTER IS NOT AVAILABLE IN THE CURRENT VERSION OF THIS GAME.
+.
+->END
+
+
+==Intro==
 Brut: Hello Father. How can I help?
+->END

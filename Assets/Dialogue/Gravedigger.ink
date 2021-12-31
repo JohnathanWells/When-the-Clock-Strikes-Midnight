@@ -39,7 +39,7 @@ Tosh: Full moon tonight.
 ==Skull==
 Tosh: Father Wright's.
     *[Excuse me?]
-    Tosh: He said she would always look over me.
+    Tosh: He said he would always look over me.
         -*[So you dug him up?]
             Tosh: Yes.
             (He stares at me with a blank expression.)
@@ -52,11 +52,11 @@ Tosh: Father Wright's.
         ~tosh_father = 2
         ->Hub
     +   [What can you tell me about that night?]
-        Tosh: The children and women were in church. A special midnight sermon. His idea.
+        Tosh: The children and women were in church for a special midnight sermon. His idea.
         ~wright_plan = 1
     +   +   [What about the men?]
-            Tosh: I kept guard outside so no one came in. His orders. Don't know anything else.
-            Tosh: He was torn to shreds at dawn.
+            Tosh: I kept guard outside so no one came in. His orders. 
+            Tosh: I found him torn to shreds at dawn.
     +   +   +   [Did anyone try to get in?]
                 Tosh: No.
     -   -   -   ->Hub
@@ -66,7 +66,6 @@ Tosh: Father Wright's.
 ==Joe_Tomb==
 Tosh: Yes.
     +   [Do you know who it was?]
-        Tosh: No.
         Tosh: Ask Mr. Ale.
         ->Hub
 

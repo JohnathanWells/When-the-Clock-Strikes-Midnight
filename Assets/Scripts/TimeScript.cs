@@ -5,6 +5,7 @@ using UnityEngine;
 public class TimeScript : MonoBehaviour
 {
     public float realSeconds;
+    public float additionalSeconds;
     public DayNightCycle dayNightManager;
     float count = 0;
     public UnityEngine.Events.UnityEvent OnTimerEnds;
@@ -12,7 +13,11 @@ public class TimeScript : MonoBehaviour
     private void Awake()
     {
         dayNightManager.dayDuration = realSeconds;
-        count = realSeconds;
+        //Temporary solution
+        additionalSeconds = (dayNightManager.blendPercentage * dayNightManager.bells[0].length) *
+            (dayNightManager.hoursInDay - 1) +
+            dayNightManager.lastBells[0].length;
+        count = realSeconds + additionalSeconds;
     }
 
     private void Update()

@@ -13,9 +13,17 @@ public class ResultsScreen : MonoBehaviour
     public float resultsFadeInTime;
     public Image coverImage;
     public string correctAnswer;
+    public bool thereIsCorrectAnswer = true;
 
     public string victoryMessage;
     public string defeatMessage;
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     public void CheckResults()
     {
@@ -40,7 +48,7 @@ public class ResultsScreen : MonoBehaviour
         col.a = 1;
         coverImage.color = col;
 
-        if (dropdown.options[dropdown.value].text == correctAnswer)
+        if (!thereIsCorrectAnswer || dropdown.options[dropdown.value].text == correctAnswer)
         {
             result.text = victoryMessage;
         }
