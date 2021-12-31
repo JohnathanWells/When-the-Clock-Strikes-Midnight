@@ -15,6 +15,7 @@ public class CommunicationManager : MonoBehaviour
 
 	[Header("Display")]
 	public SubtitleManager dialogueTextManager;
+	public float defaultSecondsPerCharacter = 0.01f;
 
 	public static CommunicationManager Instance;
 
@@ -27,6 +28,14 @@ public class CommunicationManager : MonoBehaviour
     {
 		this.activeSubject = subject;
 		LoadConversation(activeSubject.story);
+    }
+
+	public void ChangeSecondsPerCharacter(float to)
+    {
+		if (to > 0)
+			dialogueTextManager.secondPerCharacter = to;
+		else
+			dialogueTextManager.secondPerCharacter = defaultSecondsPerCharacter;
     }
 
     public void LoadConversation(Story asset)
@@ -44,6 +53,7 @@ public class CommunicationManager : MonoBehaviour
 
 	public void EndConversation()
     {
+		LoadFromStoryVariables(activeConversation);
 		OnConversationEnd.Invoke();
 		activeSubject.OnConversationEnd.Invoke();
 		conversationWindow.gameObject.SetActive(false);
@@ -62,6 +72,18 @@ public class CommunicationManager : MonoBehaviour
 		{
 			// Continue gets the next line of the story
 			string text = activeConversation.Continue();
+
+			if (text.Contains(":"))
+            {
+				string[] strs = text.Split(':');
+				dialogueTextManager.preface = string.Format("<b>{0}:</b> ", strs[0]);
+				text = strs[1];
+            }
+			else
+            {
+				dialogueTextManager.preface = "";
+            }
+
 			// This removes any white space from the text.
 			text = text.Trim();
 			dialogueTextManager.DisplayMessage(text);
@@ -142,10 +164,15 @@ public class CommunicationManager : MonoBehaviour
     {
 		foreach (var s in story.variablesState)
 		{
+			Debug.Log(s);
 			if(MysteryManager.facts.ContainsKey(s))
 			{
 				MysteryManager.facts[s] = (int)story.variablesState[s];
 			}
+			else
+            {
+				MysteryManager.facts.Add(s, (int)story.variablesState[s]);
+            }
 		}
 	}
 }

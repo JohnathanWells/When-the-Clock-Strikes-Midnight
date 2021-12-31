@@ -6,6 +6,7 @@ using Ink.Runtime;
 
 public class CommunicationSubject : MonoBehaviour
 {
+    public float secondsPerCharacter;
     public TextAsset conversation;
     [HideInInspector]
     public Story story;
@@ -19,6 +20,7 @@ public class CommunicationSubject : MonoBehaviour
         OnConversationStart.Invoke();
         CommunicationManager.Instance.LoadSubject(this);
         CommunicationManager.Instance.StartConversation();
+        CommunicationManager.Instance.ChangeSecondsPerCharacter(secondsPerCharacter);
     }
 
     public void EndConversation()

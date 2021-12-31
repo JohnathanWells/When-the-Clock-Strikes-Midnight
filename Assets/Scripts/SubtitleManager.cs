@@ -8,7 +8,9 @@ public class SubtitleManager : MonoBehaviour
 {
     public static SubtitleManager Instance;
     public float secondPerCharacter;
-    public float secondsBeforeDestruction;
+    public float minimumSecondsBeforeDestruction;
+    public float secondsPerWord;
+    public string preface;
     public TextMeshProUGUI textDisplay;
     Coroutine currentWriteup;
     Queue<string> stringQueue = new Queue<string>();
@@ -94,6 +96,10 @@ public class SubtitleManager : MonoBehaviour
         string displayString = string.Empty;
         StringBuilder builder = new StringBuilder(displayString, msg.Length + 2);
 
+        msg = msg.Replace("~", "\n");
+
+        builder.Append(preface);
+
         while (count < msg.Length - 1)
         {
             textDisplay.text = builder.ToString();
@@ -108,7 +114,13 @@ public class SubtitleManager : MonoBehaviour
         }
         textDisplay.text = builder.ToString();
 
-        yield return new WaitForSeconds(secondsBeforeDestruction);
+        if (stringQueue.Count > 0 || clearOnFinish)
+        {
+            yield return new WaitForSeconds(Mathf.Max(
+                    minimumSecondsBeforeDestruction,
+                    secondsPerWord * countWords(msg))
+                );
+        }
 
         ClearMessages(clearOnFinish);
 
@@ -116,5 +128,29 @@ public class SubtitleManager : MonoBehaviour
         {
             ContinueQueue();
         }
+    }
+
+    int countWords(string text)
+    {
+        int wordCount = 0, index = 0;
+
+        // skip whitespace until first word
+        while (index < text.Length && char.IsWhiteSpace(text[index]))
+            index++;
+
+        while (index < text.Length)
+        {
+            // check if current char is part of a word
+            while (index < text.Length && !char.IsWhiteSpace(text[index]))
+                index++;
+
+            wordCount++;
+
+            // skip whitespace until next word
+            while (index < text.Length && char.IsWhiteSpace(text[index]))
+                index++;
+        }
+
+        return wordCount;
     }
 }

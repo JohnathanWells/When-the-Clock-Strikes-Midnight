@@ -5,6 +5,7 @@ using Ink.Runtime;
 
 public class CommunicationDecision : MonoBehaviour
 {
+	public string preface;
 	public Button button;
 	public TextMeshProUGUI textMesh;
 	public Choice choice;
@@ -18,7 +19,7 @@ public class CommunicationDecision : MonoBehaviour
 
     public void Set(Choice choice)
     {
-		textMesh.text = choice.text;
+		textMesh.text = preface + choice.text;
 		this.choice = choice;
     }
 
