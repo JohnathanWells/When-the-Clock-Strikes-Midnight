@@ -55,10 +55,10 @@ Tosh: Father Wright's.
         Tosh: The children and women were in church for a special midnight sermon. His idea.
         ~wright_plan = 1
     +   +   [What about the men?]
-            Tosh: I kept guard outside so no one came in. His orders. 
-            Tosh: I found him torn to shreds at dawn.
-    +   +   +   [Did anyone try to get in?]
-                Tosh: No.
+            Tosh: I kept guard outside so no one came in or out until morning. His orders. 
+            Tosh: I found him at dawn.
+    +   +   +   [Did anyone try to get in or out?]
+                Tosh: Not after midnight. No one did.
     -   -   -   ->Hub
             
 

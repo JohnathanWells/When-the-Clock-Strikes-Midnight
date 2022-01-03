@@ -895,9 +895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef9ba02d1dbfa34cb30b3a83a256cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondPerCharacter: 0.05
+  secondPerCharacter: 0.1
   minimumSecondsBeforeDestruction: 1
-  secondsPerWord: 0.1
+  secondsPerWord: 0.2
   preface: 
   textDisplay: {fileID: 1531305974}
   OnMessageCleared:
@@ -1616,6 +1616,10 @@ PrefabInstance:
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: enableCrouch
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: maxLookAngle
+      value: 66.9
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: useSprintBar
@@ -5131,8 +5135,8 @@ MonoBehaviour:
   - name: church_letter
     value: 1
   messages:
-  - There is a letter on the ground.~"My wife won't be home between 9 and 11. Behind
-    the mill this time."~There is no signature.
+  - There is a letter on the ground.~"Since my wife will be out, meet me behind the
+    mill."~There is no signature.
   nextMessage: 0
   messageCooldown: 1
 --- !u!114 &167797214
@@ -19023,12 +19027,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 298203228}
+  fadingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.060408287
+      outSlope: 0.060408287
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.21544716
+    - serializedVersion: 3
+      time: 1
+      value: -0.002166748
+      inSlope: -3.257578
+      outSlope: -3.257578
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.073283
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   minDistance: 14
   maxDistance: 82
   maxVisibleTime: 1.25
   solidLayers:
     serializedVersion: 2
     m_Bits: 55
+  timeSeen: 0
+  seen: 0
   disableOnHide: 1
 --- !u!1 &533167937
 GameObject:
@@ -23420,12 +23450,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 1080589766}
+  fadingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.060408287
+      outSlope: -1.0021667
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.21544716
+    - serializedVersion: 3
+      time: 1
+      value: -0.002166748
+      inSlope: -1.0021667
+      outSlope: -0.2006115
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.19512194
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   minDistance: 82
   maxDistance: 104
-  maxVisibleTime: 2.32
+  maxVisibleTime: 2.35
   solidLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  timeSeen: 0
+  seen: 0
   disableOnHide: 1
 --- !u!1 &746552446
 GameObject:
@@ -29585,7 +29641,7 @@ MonoBehaviour:
     m_Mode: 1
     m_NumColorKeys: 8
     m_NumAlphaKeys: 2
-  dayDuration: 240
+  dayDuration: 720
   sceneVolume: {fileID: 11400000, guid: 64a44bfe8c35bd54bbd0d027f27faf6b, type: 2}
   xDirectionalRotation:
     serializedVersion: 2
@@ -29632,8 +29688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358c456b76fd41d418a7c2420eee4b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  realSeconds: 360
-  additionalSeconds: 0
+  realSeconds: 720
+  additionalSeconds: 5
   dayNightManager: {fileID: 990141483}
   OnTimerEnds:
     m_PersistentCalls:
@@ -30930,7 +30986,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1041579734}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: SetView
@@ -30981,7 +31037,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1041579734}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: SetView
@@ -43371,12 +43427,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 1892862123}
+  fadingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.060408287
+      outSlope: 0.060408287
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.21544716
+    - serializedVersion: 3
+      time: 0.30513594
+      value: 0.9939363
+      inSlope: -0.019872125
+      outSlope: -0.70323795
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.15173209
+    - serializedVersion: 3
+      time: 1
+      value: -0.002166748
+      inSlope: -3.4225185
+      outSlope: -3.4225185
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.073283
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   minDistance: 61.6
   maxDistance: 65
-  maxVisibleTime: 0.5
+  maxVisibleTime: 1
   solidLayers:
     serializedVersion: 2
     m_Bits: 55
+  timeSeen: 0
+  seen: 0
   disableOnHide: 1
 --- !u!1 &1180113005
 GameObject:
@@ -44789,7 +44880,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
   OnUnPause:
     m_PersistentCalls:
       m_Calls:
@@ -44816,7 +44907,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 0
+        m_CallState: 2
   animator: {fileID: 1263932308}
   menu: {fileID: 320006785}
   onTextColor: {r: 1, g: 0.05882353, b: 0, a: 1}
@@ -49861,7 +49952,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 8
+  m_lineSpacing: 20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -53431,6 +53522,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1263932303}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnConversationEnd:
     m_PersistentCalls:
       m_Calls:
@@ -53458,8 +53561,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1263932303}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   dialogueTextManager: {fileID: 35618188}
-  defaultSecondsPerCharacter: 0.01
+  defaultSecondsPerCharacter: 0.05
 --- !u!4 &1660738120
 Transform:
   m_ObjectHideFlags: 0

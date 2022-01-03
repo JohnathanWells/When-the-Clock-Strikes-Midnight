@@ -72,17 +72,16 @@ public class CommunicationManager : MonoBehaviour
 		{
 			// Continue gets the next line of the story
 			string text = activeConversation.Continue();
-
-			if (text.Contains(":"))
-            {
-				string[] strs = text.Split(':');
-				dialogueTextManager.preface = string.Format("<b>{0}:</b> ", strs[0]);
-				text = strs[1];
-            }
-			else
-            {
-				dialogueTextManager.preface = "";
-            }
+			//if (text.Contains(":"))
+   //         {
+			//	string[] strs = text.Split(':');
+			//	dialogueTextManager.preface = string.Format("<b>{0}:</b> ", strs[0]);
+			//	text = strs[1];
+   //         }
+			//else
+   //         {
+			//	dialogueTextManager.preface = "";
+   //         }
 
 			// This removes any white space from the text.
 			text = text.Trim();
@@ -164,7 +163,7 @@ public class CommunicationManager : MonoBehaviour
     {
 		foreach (var s in story.variablesState)
 		{
-			Debug.Log(s);
+			//Debug.Log(s);
 			if(MysteryManager.facts.ContainsKey(s))
 			{
 				MysteryManager.facts[s] = (int)story.variablesState[s];

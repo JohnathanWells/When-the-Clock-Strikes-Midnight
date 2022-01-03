@@ -37,6 +37,7 @@ public class SubtitleManager : MonoBehaviour
         }
         else
         {
+
             if (!displayingMessage)
             {
                 if (currentWriteup != null)
@@ -97,6 +98,17 @@ public class SubtitleManager : MonoBehaviour
         StringBuilder builder = new StringBuilder(displayString, msg.Length + 2);
 
         msg = msg.Replace("~", "\n");
+
+        if (msg.Contains(":"))
+        {
+            string[] strs = msg.Split(':');
+            preface = string.Format("<b>{0}:</b> ", strs[0]);
+            msg = strs[1];
+        }
+        else
+        {
+            preface = "";
+        }
 
         builder.Append(preface);
 

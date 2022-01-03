@@ -5,11 +5,14 @@ using UnityEngine;
 public class Vanishing : MonoBehaviour
 {
     public Renderer renderer;
+    public AnimationCurve fadingCurve;
     public float minDistance;
     public float maxDistance;
     public float maxVisibleTime;
     public LayerMask solidLayers;
+    [SerializeField]
     float timeSeen = 0;
+    [SerializeField]
     bool seen = false;
     public bool disableOnHide;
     Color col;
@@ -30,16 +33,20 @@ public class Vanishing : MonoBehaviour
 
         if (seen)
         {
+            //col.a = Mathf.Min(
+            //    fadingCurve.Evaluate(Mathf.InverseLerp(0, maxVisibleTime, maxVisibleTime - timeSeen)), 
+            //    fadingCurve.Evaluate(Mathf.InverseLerp(minDistance, maxDistance, (transform.position - Camera.main.transform.position).magnitude)),
+            //    col.a);
             col.a = Mathf.Min(
-                Mathf.InverseLerp(0, maxVisibleTime, timeSeen), 
-                Mathf.InverseLerp(minDistance, maxDistance, (transform.position - Camera.main.transform.position).magnitude));
+                Mathf.InverseLerp(0, maxVisibleTime, maxVisibleTime - timeSeen), 
+                Mathf.InverseLerp(minDistance, maxDistance, (transform.position - Camera.main.transform.position).magnitude),
+                col.a);
 
             //renderer.material.color = col;
             renderer.material.SetColor("_MainColor", col);
-            Debug.Log(col.a);
             timeSeen -= Time.deltaTime;
 
-            if (col.a <= 0 && disableOnHide)
+            if (timeSeen <= 0 && disableOnHide)
             {
                 gameObject.SetActive(false);
             }
