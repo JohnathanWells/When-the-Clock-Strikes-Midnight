@@ -356,10 +356,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e3a8e98a11b0c42af1273f6022f2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeQuit: 20
+  timeBeforeQuit: 12
   dropdown: {fileID: 1187934069}
   result: {fileID: 1088421542}
-  resultsFadeInTime: 1
+  resultsFadeInTime: 2
   coverImage: {fileID: 265130997}
   correctAnswer: The Doctor
   thereIsCorrectAnswer: 0
@@ -606,7 +606,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 684029fc708c01d4689aec453cbb0590, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -631,8 +631,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -670,7 +670,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &618650937
@@ -877,7 +877,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 705796012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 192017719}
+        m_TargetAssemblyTypeName: ResultsScreen, Assembly-CSharp
+        m_MethodName: CheckResults
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &705796012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,7 +1482,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 1590.8711, y: 524.7284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088421542
 MonoBehaviour:
@@ -1492,7 +1504,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Result
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 684029fc708c01d4689aec453cbb0590, type: 2}
   m_sharedMaterial: {fileID: 2859722610464574277, guid: 684029fc708c01d4689aec453cbb0590, type: 2}
@@ -1527,7 +1539,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1673,6 +1685,8 @@ MonoBehaviour:
     - m_Text: Brut the Carpenter
       m_Image: {fileID: 0}
     - m_Text: The Doctor
+      m_Image: {fileID: 0}
+    - m_Text: The White Cube
       m_Image: {fileID: 0}
     - m_Text: One of the Victims
       m_Image: {fileID: 0}
@@ -2208,15 +2222,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 631b72aaaa5fcf147a7466bcefd44ce1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

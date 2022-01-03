@@ -32,6 +32,7 @@ public class ResultsScreen : MonoBehaviour
 
     IEnumerator fadeOut()
     {
+        coverImage.gameObject.SetActive(true);
         float count = 0;
         Color col;
         col = coverImage.color;
@@ -47,6 +48,8 @@ public class ResultsScreen : MonoBehaviour
         }
         col.a = 1;
         coverImage.color = col;
+        col2.a = col.a;
+        result.color = col2;
 
         if (!thereIsCorrectAnswer || dropdown.options[dropdown.value].text == correctAnswer)
         {
