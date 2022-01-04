@@ -124,10 +124,12 @@ public class FirstPersonController : MonoBehaviour
     public Transform joint;
     public float bobSpeed = 10f;
     public Vector3 bobAmount = new Vector3(.15f, .05f, 0f);
+    public UnityEngine.Events.UnityEvent OnStep;
 
     // Internal Variables
     private Vector3 jointOriginalPos;
     private float timer = 0;
+    private float lastSin = 0;
 
     #endregion
 
@@ -516,8 +518,18 @@ public class FirstPersonController : MonoBehaviour
             {
                 timer += Time.deltaTime * bobSpeed;
             }
+
+            float sin = Mathf.Sin(timer);
+
             // Applies HeadBob movement
-            joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
+            joint.localPosition = new Vector3(jointOriginalPos.x + sin * bobAmount.x, jointOriginalPos.y + sin * bobAmount.y, jointOriginalPos.z + sin * bobAmount.z);
+
+            if (/*sin == 0 || */(sin < 0 && lastSin > 0))
+            {
+                OnStep.Invoke();
+            }
+
+            lastSin = sin;
         }
         else
         {
@@ -724,6 +736,8 @@ public class FirstPersonController : MonoBehaviour
         fpc.joint = (Transform)EditorGUILayout.ObjectField(new GUIContent("Camera Joint", "Joint object position is moved while head bob is active."), fpc.joint, typeof(Transform), true);
         fpc.bobSpeed = EditorGUILayout.Slider(new GUIContent("Speed", "Determines how often a bob rotation is completed."), fpc.bobSpeed, 1, 20);
         fpc.bobAmount = EditorGUILayout.Vector3Field(new GUIContent("Bob Amount", "Determines the amount the joint moves in both directions on every axes."), fpc.bobAmount);
+        EditorGUILayout.PropertyField(this.serializedObject.FindProperty("OnStep"), true);
+        this.serializedObject.ApplyModifiedProperties();
         GUI.enabled = true;
 
         #endregion

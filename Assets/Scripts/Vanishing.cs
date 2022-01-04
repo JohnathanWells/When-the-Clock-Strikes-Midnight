@@ -38,7 +38,7 @@ public class Vanishing : MonoBehaviour
             //    fadingCurve.Evaluate(Mathf.InverseLerp(minDistance, maxDistance, (transform.position - Camera.main.transform.position).magnitude)),
             //    col.a);
             col.a = Mathf.Min(
-                Mathf.InverseLerp(0, maxVisibleTime, maxVisibleTime - timeSeen), 
+                Mathf.InverseLerp(0, maxVisibleTime, timeSeen), 
                 Mathf.InverseLerp(minDistance, maxDistance, (transform.position - Camera.main.transform.position).magnitude),
                 col.a);
 
@@ -46,7 +46,7 @@ public class Vanishing : MonoBehaviour
             renderer.material.SetColor("_MainColor", col);
             timeSeen -= Time.deltaTime;
 
-            if (timeSeen <= 0 && disableOnHide)
+            if (col.a <= 0 && disableOnHide)
             {
                 gameObject.SetActive(false);
             }

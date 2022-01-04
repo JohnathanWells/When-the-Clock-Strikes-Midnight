@@ -1,4 +1,4 @@
-VAR tomb_joe = 1
+VAR tomb_joe = 0
 VAR ale_night_tosh = 0
 VAR phillip_well = 0
 VAR ale_angry = 0
