@@ -5,11 +5,15 @@ VAR brut_night_tosh = 0
 VAR ale_night_tosh = 0
 VAR tomb_joe = 0
 VAR wright_plan = 0
+VAR smith_angry = 0
+VAR brut_angry = 0
+VAR church_letter = 0
+VAR town_anger = 0
 
 ->Intro
 
 ==Intro==
-Tosh: Hello.
+(Tosh looks at me but says nothing.)
 ->Hub
 
 ==Hub==
@@ -57,8 +61,20 @@ Tosh: Father Wright's.
     +   +   [What about the men?]
             Tosh: I kept guard outside so no one came in or out until morning. His orders. 
             Tosh: I found him at dawn.
-    +   +   +   [Did anyone try to get in or out?]
+            ->Wright_Night_Questions
+=Wright_Night_Questions
+    +   +   +   [Did anyone try to get in or out that night?]
                 Tosh: Not after midnight. No one did.
+                ->Wright_Night_Questions
+    +   +   +   [Was anyone helping you that night?]
+                Tosh: Don't know. Father Wright didn't say.
+                ->Wright_Night_Questions
+    +   +   +   [What did you find?]
+                Tosh: Most where you are. Rest over there.
+                Tosh: Put him together and buried him. Farmer asked if I had seen him, told him he died.
+                ->Wright_Night_Questions
+    +   +   +   [I'm sorry to hear that.]
+                Tosh: Yes.
     -   -   -   ->Hub
             
 
@@ -121,6 +137,19 @@ Tosh: I saw Brut leave his house on Monday.
     --   ->Suspicious
 
 ==Leave==
-(Tosh nods and goes back to digging)
+(Tosh nods.)
 .
+~town_anger = 0
+{tosh_skull:
+~town_anger++
+}
+{smith_angry:
+~town_anger++
+}
+{brut_angry:
+~town_anger++
+}
+{church_letter > 1:
+~town_anger++
+}
 ->END

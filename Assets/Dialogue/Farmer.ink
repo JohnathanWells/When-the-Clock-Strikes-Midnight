@@ -8,6 +8,7 @@ VAR annoyance = 0
 VAR doctor_rumors = 0
 VAR smith_hermit = 0
 VAR brut_drinking = 0
+VAR town_anger = 0
 
 ->Intro
 
@@ -100,4 +101,17 @@ Greg the Farmer: That is all.
     <>Greg the Farmer: Amen, Father.
 }
 .
+~town_anger = 0
+{tosh_skull:
+~town_anger++
+}
+{smith_angry:
+~town_anger++
+}
+{brut_angry:
+~town_anger++
+}
+{church_letter > 1:
+~town_anger++
+}
 ->END

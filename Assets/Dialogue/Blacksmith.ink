@@ -5,6 +5,11 @@ VAR monster_alone = 0
 VAR monster_midnight = 0
 VAR smith_sarah_midnight = 0
 VAR church_letter = 0
+VAR doctor_wife = 0
+VAR tosh_skull = 0
+VAR ale_night_tosh = 0
+VAR brut_angry = 0
+VAR town_anger = 0
 
 ->Intro
 
@@ -50,6 +55,7 @@ John Smith: Yeah...
 John Smith: Tosh can go to hell. 
 +[Is it true?]
 -John Smith: ...Yes. He does that sometimes. To squirrels, rats, stray cats...
+~smith_squirrel = 2
     ++[People?]
     --John Smith: Heavens, no! Only animals, he's too weak to hurt a person, even if he wanted to.
     
@@ -80,6 +86,7 @@ John Smith: Can't really say I've noticed anything particularly strange. Things 
 John Smith: No. Why would you even think it is mine?
 +   [Not a lot of literate married men here]
     John Smith: The doctor is married, he mentioned his wife to me once. He may a better candidate if you ask me. And you are asking me.
+    ~doctor_wife = 1
 +   +   [Thank you.]
         John Smith: Yeah.
         ->Hub
@@ -88,4 +95,17 @@ John Smith: No. Why would you even think it is mine?
 ==Leave==
 John Smith: Fine.
 .
+~town_anger = 0
+{tosh_skull:
+~town_anger++
+}
+{smith_angry:
+~town_anger++
+}
+{brut_angry:
+~town_anger++
+}
+{church_letter > 1:
+~town_anger++
+}
 ->END

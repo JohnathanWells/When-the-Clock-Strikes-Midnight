@@ -9,6 +9,10 @@ VAR church_sighting = 0
 VAR phillip_remains_found = 0
 VAR brut_daughter_discoverer = 0
 VAR church_letter = 0
+VAR tosh_skull = 0
+VAR smith_angry = 0
+VAR brut_angry = 0
+VAR town_anger = 0
 
 ->Intro
 
@@ -136,4 +140,17 @@ Mr. Ale: That if you look under them, you will see nothing between the boots and
 ==Leave==
 Mr. Ale: Good luck.
 .
+~town_anger = 0
+{tosh_skull:
+~town_anger++
+}
+{smith_angry:
+~town_anger++
+}
+{brut_angry:
+~town_anger++
+}
+{church_letter > 1:
+~town_anger++
+}
 ->END

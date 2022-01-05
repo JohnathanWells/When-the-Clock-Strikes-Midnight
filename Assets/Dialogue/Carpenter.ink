@@ -7,7 +7,13 @@ VAR brut_stress_0 = 0
 VAR brut_stress_1 = 0
 VAR brut_stress_2 = 0
 VAR brut_drinking = 0
+VAR brut_angry = 0
 VAR _temp = 0
+VAR tosh_skull = 0
+VAR ale_night_tosh = 0
+VAR smith_angry = 0
+VAR church_letter = 0
+VAR town_anger = 0
 
 
 ~_temp = 0
@@ -21,6 +27,7 @@ Brut: What do you want?
 ~_temp = brut_stress_0 + brut_stress_1 + brut_stress_2
 {_temp > 2:
 (Brut is nervous and avoiding conversation. I won't get anything out of him now.)
+~brut_angry = 1
 }
 + [(Leave) God bless you.] ->Leave
 + {_temp <= 2}[I'm sorry for your loss.]->Loss
@@ -133,4 +140,17 @@ Brut: That bloody doctor. There is something odd about him. He talks as if he's 
 ==Leave==
 Brut: Whatever.
 .
+~town_anger = 0
+{tosh_skull:
+~town_anger++
+}
+{smith_angry:
+~town_anger++
+}
+{brut_angry:
+~town_anger++
+}
+{church_letter > 1:
+~town_anger++
+}
 ->END
