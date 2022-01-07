@@ -11,6 +11,7 @@ VAR smith_angry = 0
 VAR _temp = 0
 VAR brut_angry = 0
 VAR town_anger = 0
+VAR ale_angry = 0
 ->Intro
 
 ==Intro==
@@ -27,12 +28,12 @@ The Doctor: Father! Good seeing you today! What do you need?
 +{doctor_wife}[Where is your wife?]->Wife
 
 ==Past==
-The Doctor: Indeed, I am not! I just moved here about six months ago. 
+The Doctor: Indeed, I am not! I just moved to town about six months ago. 
 ->Past_Questions
 =Past_Questions
-*[What made you move here?]
+*[What made you move?]
     The Doctor: A distant relative of mine left a house here after his untimely death, and I needed a place to perform research. This seemed like a perfect place for that.
-    The Doctor: I don't really have anyone waiting for me back home, all the children moved away, so it's not any more lonely here than it used to be there.
+    The Doctor: I don't really have anyone waiting for me back home anyway. All the children moved away, so I'm not any more lonely.
     ~doctor_wife = 1
     ->Past_Questions
 +{doctor_wife}[What happened to you wife?] ->Wife
@@ -43,9 +44,9 @@ The Doctor: Indeed, I am not! I just moved here about six months ago.
     ->Hub
     
 =Past_Phillip
-The Doctor: A couple of days before, actually. Of course that didn't look good with the locals, but I was attending the innkeeper's son when it happened.
-The Doctor: They were so frustrated at my allibi, they didn't stop to ask if everyone else had one.
-+   [You're saying that...]->Opinion
+The Doctor: A couple of days before, actually. Of course that didn't look good with the locals, but I was with the innkeeper and his son when it happened.
+The Doctor: Everyone was so frustrated at my allibi, they didn't stop to ask if everyone else had one.
++   [You suspect the other?]->Opinion
 +   [So you were not involved?]
     The Doctor: Father, would I admit to such a heinous crime, even if I had committed it?
     ->Past_Questions
@@ -93,11 +94,11 @@ The Doctor: Hmm I can't say I do. Why do you ask?
 The Doctor: Everyone in this town has secrets, Reverend. If you don't know that yet, you will by the end of the night.
 The Doctor: How many people did the demon kill? All of them? Some of them? None of them? I wonder...
 +   [You don't believe the demon exists?]
-    The Doctor: I never said that. Everyone has the same feeling, the same sensation, something is wrong in this woods. But is maiming truly unique to the supernatural?
-    The Doctor: Maybe you would be sending an innocent to the noose by chasing this demon. You should give it some thought.
+    The Doctor: I never said that. Everyone has the same gut feeling, the same sensation that something is wrong in these woods... 
+    The Doctor: But is maiming truly unique to the supernatural? Maybe you would only be sending an innocent to the noose by chasing this demon. 
 +   +   [Maybe you are the demon.]
         The Doctor: Ha ha ha! I certainly could be! 
-        {town_anger > 2} The Doctor: But I wonder if it would even matter now, with all these mortals plotting behind your back.
+        {town_anger > 2: The Doctor: But I wonder if it would even matter now, with so many already plotting behind your back.}
         (The Doctor seems amused.)
 +   +   +   [What should I do?]
             ->Opinion_2
@@ -108,7 +109,7 @@ The Doctor: How many people did the demon kill? All of them? Some of them? None 
     ->Hub
     
 =Opinion_2
-The Doctor: That I cannot say! I doubt you will get clear answers in the short time you have left. Perhaps you should start by looking at those trying waste it. 
+The Doctor: That I cannot say! I doubt you will get many clear answers in the short time you have left, so perhaps you should start by looking at those trying to waste it. 
 The Doctor: When the clock strikes midnight you will still have to make a decision. Be that what it might be. 
 ->Hub
 
@@ -134,6 +135,9 @@ The Doctor: And with you too!
 ~town_anger++
 }
 {church_letter > 1:
+~town_anger++
+}
+{ale_angry:
 ~town_anger++
 }
 ->END

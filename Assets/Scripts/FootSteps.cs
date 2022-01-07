@@ -28,13 +28,11 @@ public class FootSteps : MonoBehaviour
 
                     if (right)
                     {
-                        Debug.Log("r");
                         return _rClips;
                     }
                     else
                     {
 
-                        Debug.Log("l");
                         return _lClips;
                     }
                 }

@@ -9,6 +9,7 @@ VAR smith_angry = 0
 VAR brut_angry = 0
 VAR church_letter = 0
 VAR town_anger = 0
+VAR ale_angry = 0
 
 ->Intro
 
@@ -26,6 +27,9 @@ VAR town_anger = 0
 +{tomb_joe} [Someone vandalized Joseph's tomb.]->Joe_Tomb
 *[You left the door to your house open.] ->House
 +[I see you dug a new hole.] ->Hole
+* {church_letter} [Do you recognize this letter?]
+    Brut: Can't read.
+    ->Hub
 
 ==Hole==
 Tosh: Full moon tonight.
@@ -150,6 +154,9 @@ Tosh: I saw Brut leave his house on Monday.
 ~town_anger++
 }
 {church_letter > 1:
+~town_anger++
+}
+{ale_angry:
 ~town_anger++
 }
 ->END

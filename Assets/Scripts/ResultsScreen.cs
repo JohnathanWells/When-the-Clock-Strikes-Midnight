@@ -78,6 +78,7 @@ public class ResultsScreen : MonoBehaviour
         {
             foreach (var c in conditions)
             {
+                //Debug.Log(name + "-" + c.key + "=" + c.value + "?" + MysteryManager.facts[c.key]);
                 if (c.GetStatus())
                 {
                     if (conditionLogicGate == conditionType.OR)

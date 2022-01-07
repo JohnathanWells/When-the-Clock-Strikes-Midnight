@@ -14,6 +14,7 @@ VAR ale_night_tosh = 0
 VAR smith_angry = 0
 VAR church_letter = 0
 VAR town_anger = 0
+VAR ale_angry = 0
 
 
 ~_temp = 0
@@ -34,6 +35,9 @@ Brut: What do you want?
 + {_temp <= 2}{tomb_joe> 0} [Joe's tomb is vandalized.]->Joe
 + {_temp <= 2}[Have you seen anything odd?]->Accusations
 * {brut_drinking} [They say you have been drinking a lot.]->Drinking
+* {church_letter} [Do you recognize this letter?]
+    Brut: Can't read a single word of it.
+    ->Hub
 
 ==Loss==
 Brut: I don't need you pity.
@@ -92,6 +96,7 @@ Brut: If that's the case, why don't you save us both some time and shove the ser
 Brut: Yeah, what about it.
     +{joe_rumors} [Did you do it?]
         Brut: Yes. 
+        ~tomb_joe = 2
     +   +   [Why?]
             Brut: Because he killed my little girl, that's why.
             Brut: Everyone blamed it on the demon or whatever, but we all heard the rumors about Joe. It's a bloody miracle it took him so long to do what he did.
@@ -151,6 +156,9 @@ Brut: Whatever.
 ~town_anger++
 }
 {church_letter > 1:
+~town_anger++
+}
+{ale_angry:
 ~town_anger++
 }
 ->END

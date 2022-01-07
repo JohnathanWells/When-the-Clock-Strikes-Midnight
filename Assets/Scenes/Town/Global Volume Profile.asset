@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7336791906706909041
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d335ddfaff71d4493ab520ae36643e, type: 3}
+  m_Name: TonemapperVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  isEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  contrast:
+    m_OverrideState: 0
+    m_Value: 0.5
+    min: 0
+    max: 1
+  shoulder:
+    m_OverrideState: 0
+    m_Value: 0.5
+    min: 0
+    max: 1
+  graypointIn:
+    m_OverrideState: 0
+    m_Value: 0.18
+    min: 0
+    max: 1
+  graypointOut:
+    m_OverrideState: 0
+    m_Value: 0.18
+    min: 0
+    max: 1
+  whitepoint:
+    m_OverrideState: 0
+    m_Value: 10
+  crossTalk:
+    m_OverrideState: 0
+    m_Value: 0.394
+    min: 0
+    max: 1
+  saturation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 1
+  crossTalkSaturation:
+    m_OverrideState: 0
+    m_Value: 0.039
+    min: 0.001
+    max: 1
 --- !u!114 &-4447853505334135194
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -318,7 +373,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.7921569, g: 0.7921569, b: 0.8862745, a: 1}
+    m_Value: {r: 0.84518075, g: 0.84518075, b: 0.915, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -414,6 +469,39 @@ MonoBehaviour:
   heightMaxLayer1:
     m_OverrideState: 0
     m_Value: 10
+--- !u!114 &4485470119491261518
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d61509376d05fc438d9ed9281e44e26, type: 3}
+  m_Name: CompressionVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  isEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  weight:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  accuracy:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 1
+  mode:
+    m_OverrideState: 0
+    m_Value: 0
+  colorspace:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &5663832548335604930
 MonoBehaviour:
   m_ObjectHideFlags: 3

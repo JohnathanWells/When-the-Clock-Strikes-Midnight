@@ -163,15 +163,16 @@ public class CommunicationManager : MonoBehaviour
     {
 		foreach (var s in story.variablesState)
 		{
-			//Debug.Log(s);
 			if(MysteryManager.facts.ContainsKey(s))
 			{
 				MysteryManager.facts[s] = (int)story.variablesState[s];
+				//Debug.Log("Changed: " + s + " " + (int)story.variablesState[s]);
 			}
 			else
             {
 				MysteryManager.facts.Add(s, (int)story.variablesState[s]);
-            }
+				//Debug.Log("Registered: " + s + " " + (int)story.variablesState[s]);
+			}
 		}
 	}
 }

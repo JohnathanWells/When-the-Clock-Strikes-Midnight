@@ -534,22 +534,21 @@ MonoBehaviour:
     conditionLogicGate: 0
     message: 'The priest left town with the morning light,
 
-      cross agaisnt
-      his chest, eyes filled with fright.
+      cross agaisnt his
+      chest, eyes filled with fright.
 
-      
 
-      The land was never fred
-      from the blight,
+      The land was never fred from the blight,
 
-      for no one stops by since that night.'
+      for
+      no one stops by since that night.'
     stackable: 0
     priority: 2
   - name: The Town Strikes
     conditions:
     - key: town_anger
       value: 4
-      relationship: 4
+      relationship: 5
     conditionLogicGate: 0
     message: "As the twelveth bell rang in the misty thorp, \r\nthey found the new
       priest's mangled corpse.\r\n\r\nNo murders have occurred since that noon,\r\nonly
@@ -561,6 +560,9 @@ MonoBehaviour:
     - key: Greg the Farmer_selected
       value: 0
       relationship: 0
+    - key: church_letter
+      value: 1
+      relationship: 3
     conditionLogicGate: 0
     message: "As the twelveth bell rang in the misty thorp, \nthey found the new
       priest's mangled corpse.\n\nEmpty homes after everyone left.\nForeigns now

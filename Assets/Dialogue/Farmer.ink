@@ -8,7 +8,14 @@ VAR annoyance = 0
 VAR doctor_rumors = 0
 VAR smith_hermit = 0
 VAR brut_drinking = 0
+VAR phillip_remains_found = 0
+VAR tosh_skull = 0
+VAR ale_night_tosh = 0
+VAR smith_angry = 0
+VAR _temp = 0
+VAR brut_angry = 0
 VAR town_anger = 0
+VAR ale_angry = 0
 
 ->Intro
 
@@ -23,8 +30,13 @@ Greg the Farmer: Blessed evening Father, how can I help you?
 +{church_letter==2}[Can we go over the letter again?]
     Greg the Farmer: Sure thing, Father.
     ->Letter
+*{church_letter == 1}[Do you recognize this letter?]
+    Greg the Farmer: I can't say I understand a word in that piece of paper, could you read it out to me? 
++   +   [(Read letter out loud.)] 
+    Greg the Farmer: I see... well...
+    ->Letter
 //+{church_letter==5}[You lied to me about the letter]->Bloodstains_3
-+{joe_rumors or tomb_joe}[Do you know who vandalized Joe's tomb?]->Joe_Tomb
++{joe_rumors and tomb_joe == 1}[Do you know who vandalized Joe's tomb?]->Joe_Tomb
 +[How is your family?]->Family
 +[Have you seen anything strange?]->Strange
 
@@ -112,6 +124,9 @@ Greg the Farmer: That is all.
 ~town_anger++
 }
 {church_letter > 1:
+~town_anger++
+}
+{ale_angry:
 ~town_anger++
 }
 ->END

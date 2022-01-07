@@ -17,14 +17,14 @@ VAR town_anger = 0
 ->Intro
 
 ==Intro==
-Mr. Ale: Good evening Reverend, let me know how I can help you find that beast.
+Mr. Ale: Good evening Reverend, let me know how I can help.
 ->Hub
 
 ==Hub==
 +[(Leave) Thank you. God bless you.]->Leave
-+{tomb_joe} [Who vandalized Joe's tomb?]->Joe_Tomb
++{tomb_joe==1} [Who vandalized Joe's tomb?]->Joe_Tomb
 +{ale_night_tosh} [Were you stealing from Phillip?]->Well
-*{church_letter == 2}[Do you recognize this letter?]->Letter
+*{church_letter}[Do you recognize this letter?]->Letter
 +[Have you seen anything interesting?]->Information
 +[How is your family?]->Family
 
@@ -57,7 +57,7 @@ Mr. Ale: No! Of course not!
     +   [Very well.] ->Hub
     +   [Tosh says he saw you.]
         Mr. Ale: Oh, that...
-        Mr. Ale: Look, I wasn't really stealing from Phillip. That well wasn't built by him, it belonged to his father, and he never had any issue with letting me use it!
+        Mr. Ale: Look, I wasn't really stealing from Phillip. That well wasn't built by him, but by his father, and he never had any issue with letting me use it.
         Mr. Ale: I run a tavern and can't spare an hour walk to the river every time I need to make a drink. 
         Mr. Ale: Oh, but Phillip would not let anyone use his precious well! That bloody fool...
             ~phillip_well = 1
@@ -112,10 +112,10 @@ Mr. Ale: I have a believable and an incredible story. Which one would you like t
     +   [The unrealistic one.]->Unrealistic_Story
 
 =Realistic_Story
-Mr. Ale: The night Father Wright died, he had gathered all the women and children in the church and locked them there overnight, probably to see if someone still died that night. 
+Mr. Ale: The night Father Wright died, he had gathered all the women and children in the church and locked them there overnight, right? Probably to see if someone still died that night. 
     +   [Well, someone did.]
-    Mr. Ale: Right, which is how we know that the creature is disguised as a man, because all the women and children were accounted for when he died, but none of the men. 
-    Mr. Ale: Anyway, that's not the story, but rather that I saw someone waiting next to the church cemetery that night. Couldn't tell who.
+    Mr. Ale: Right, which is how we know that the creature is disguised as a man. 
+    Mr. Ale: Anyway, that's not the story, but rather that I saw someone waiting next to the church that night, on the left. Couldn't tell who, sadly.
     ~church_sighting = 1
     Mr. Ale: Not an exciting story, but I hope it helps.
     +   +   [What about the other story?] ->Unrealistic_Story
@@ -129,7 +129,7 @@ Mr. Ale: You know that doctor in the market? They say there's no man under those
 Mr. Ale: That if you look under them, you will see nothing between the boots and the rest of the body. No legs at all.
 ~doctor_rumors = 1
 +   [That seems like a nasty rumor.]
-        Mr. Ale: Perhaps. But every often I do hear strange sounds coming out of the old house he moved into.   
+        Mr. Ale: Perhaps. But we do sometimes hear strange sounds coming out of the old house he moved into.   
         Mr. Ale: Phillip also died the same week the doctor moved in, so it's not just baseless paranoia.
 +   +   [What about the other story?] ->Realistic_Story
 +   +   [Let me ask you something else.]
@@ -151,6 +151,9 @@ Mr. Ale: Good luck.
 ~town_anger++
 }
 {church_letter > 1:
+~town_anger++
+}
+{ale_angry:
 ~town_anger++
 }
 ->END
