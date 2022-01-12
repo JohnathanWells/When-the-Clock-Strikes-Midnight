@@ -13,6 +13,7 @@ VAR tosh_skull = 0
 VAR smith_angry = 0
 VAR brut_angry = 0
 VAR town_anger = 0
+VAR tosh_angry = 0
 
 ->Intro
 
@@ -141,7 +142,7 @@ Mr. Ale: That if you look under them, you will see nothing between the boots and
 Mr. Ale: Good luck.
 .
 ~town_anger = 0
-{tosh_skull:
+{tosh_angry:
 ~town_anger++
 }
 {smith_angry:

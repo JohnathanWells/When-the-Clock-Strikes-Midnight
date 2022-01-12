@@ -16,6 +16,7 @@ VAR _temp = 0
 VAR brut_angry = 0
 VAR town_anger = 0
 VAR ale_angry = 0
+VAR tosh_angry = 0
 
 ->Intro
 
@@ -114,7 +115,7 @@ Greg the Farmer: That is all.
 }
 .
 ~town_anger = 0
-{tosh_skull:
+{tosh_angry:
 ~town_anger++
 }
 {smith_angry:

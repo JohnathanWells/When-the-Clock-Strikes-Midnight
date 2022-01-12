@@ -19,6 +19,23 @@ public class SubtitleManager : MonoBehaviour
     public UnityEngine.Events.UnityEvent OnMessageFinished;
     public bool clearOnFinish = true;
 
+    [Header("Pause")]
+    public bool WaitForClick = false;
+    private bool textPaused = false;
+    public UnityEngine.Events.UnityEvent OnPaused;
+    public UnityEngine.Events.UnityEvent OnUnpaused;
+    public bool pauseOnLastString = false;
+
+    public void SetTextPause(bool to)
+    {
+        textPaused = to;
+
+        if (to) 
+            OnPaused.Invoke();
+        else 
+            OnUnpaused.Invoke();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -114,6 +131,11 @@ public class SubtitleManager : MonoBehaviour
 
         while (count < msg.Length - 1)
         {
+            while (textPaused)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
             textDisplay.text = builder.ToString();
             yield return new WaitForSeconds(secondPerCharacter);
 
@@ -126,7 +148,16 @@ public class SubtitleManager : MonoBehaviour
         }
         textDisplay.text = builder.ToString();
 
-        if (stringQueue.Count > 0 || clearOnFinish)
+        if (WaitForClick && (pauseOnLastString || stringQueue.Count > 0))
+        {
+            SetTextPause(true);
+
+            while (textPaused)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        else if (stringQueue.Count > 0 || clearOnFinish)
         {
             yield return new WaitForSeconds(Mathf.Max(
                     minimumSecondsBeforeDestruction,

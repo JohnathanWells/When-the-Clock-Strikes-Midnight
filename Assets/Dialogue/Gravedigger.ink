@@ -1,4 +1,5 @@
 VAR tosh_skull = 0
+VAR tosh_angry = 0
 VAR tosh_father = 0
 VAR smith_squirrel = 0
 VAR brut_night_tosh = 0
@@ -59,6 +60,11 @@ Tosh: Father Wright's.
         (Tosh stares at me, then nods silently. He doesn't mean it.)
         ~tosh_father = 2
         ->Hub
+    *   [Did you kill him?]
+        (Tosh frowns. He did not like that question.)
+        Tosh: No.
+        ~tosh_angry = 1
+        ->Hub
     +   [What can you tell me about that night?]
         Tosh: The children and women were in church for a special midnight sermon. His idea.
         ~wright_plan = 1
@@ -90,7 +96,7 @@ Tosh: Yes.
         ->Hub
 
 ==House==
-(Tosh looks briefly at his cabin, then goes back to shoveling. Seemingly undisturbed by this information.)
+(Tosh looks briefly at his cabin, then shrugs. Seemingly undisturbed.)
 ->Hub
 
 
@@ -144,7 +150,7 @@ Tosh: I saw Brut leave his house on Monday.
 (Tosh nods.)
 .
 ~town_anger = 0
-{tosh_skull:
+{tosh_angry:
 ~town_anger++
 }
 {smith_angry:

@@ -472,10 +472,10 @@ MonoBehaviour:
       value: 0
       relationship: 1
     conditionLogicGate: 1
-    message: 'A loud snap echoed in the dark sky,
+    message: 'The gallow''s rope snapped in the dark sky,
 
-      horrified town seeing one
-      of them die.
+      mourning town seeing
+      part of it die.
 
 
       Will it now stop? Will it now falter?
@@ -506,7 +506,7 @@ MonoBehaviour:
       relationship: 1
     conditionLogicGate: 0
     message: "A small army had to be called in,\r\nto hang six men for their heinous
-      sins.\r\r\n\nAs judgement was reached with the twelveth ring,\r\nthe horror
+      sins.\r\r\n\nAs judgement was reached with the twelfth ring,\r\nthe horror
       and panic settled in.\n\r\nFire broke out as torches were thrown,\r\nall that's
       left now is ashes and bones."
     stackable: 0
@@ -534,11 +534,11 @@ MonoBehaviour:
     conditionLogicGate: 0
     message: 'The priest left town with the morning light,
 
-      cross agaisnt his
+      cross against his
       chest, eyes filled with fright.
 
 
-      The land was never fred from the blight,
+      The land was never freed from the blight,
 
       for
       no one stops by since that night.'
@@ -550,7 +550,7 @@ MonoBehaviour:
       value: 4
       relationship: 5
     conditionLogicGate: 0
-    message: "As the twelveth bell rang in the misty thorp, \r\nthey found the new
+    message: "As the twelfth bell rang in the misty thorp, \r\nthey found the new
       priest's mangled corpse.\r\n\r\nNo murders have occurred since that noon,\r\nonly
       confessions every full moon."
     stackable: 0
@@ -564,9 +564,9 @@ MonoBehaviour:
       value: 1
       relationship: 3
     conditionLogicGate: 0
-    message: "As the twelveth bell rang in the misty thorp, \nthey found the new
-      priest's mangled corpse.\n\nEmpty homes after everyone left.\nForeigns now
-      whisper of midnight death."
+    message: "As the twelfth bell rang in the misty thorp, \nthey found the new priest's
+      mangled corpse.\n\nEmpty homes after everyone left.\nOthers now whisper of
+      midnight death."
     stackable: 1
     priority: 1
   thereIsCorrectAnswer: 1

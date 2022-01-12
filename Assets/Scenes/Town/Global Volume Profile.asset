@@ -161,6 +161,39 @@ MonoBehaviour:
     m_Value: 4
     min: 1
     max: 8
+--- !u!114 &-1735527689869341880
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d61509376d05fc438d9ed9281e44e26, type: 3}
+  m_Name: CompressionVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  isEnabled:
+    m_OverrideState: 0
+    m_Value: 0
+  weight:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  accuracy:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 1
+  mode:
+    m_OverrideState: 0
+    m_Value: 0
+  colorspace:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &-185340082158469844
 MonoBehaviour:
   m_ObjectHideFlags: 3

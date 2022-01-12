@@ -15,6 +15,7 @@ VAR smith_angry = 0
 VAR church_letter = 0
 VAR town_anger = 0
 VAR ale_angry = 0
+VAR tosh_angry = 0
 
 
 ~_temp = 0
@@ -146,7 +147,7 @@ Brut: That bloody doctor. There is something odd about him. He talks as if he's 
 Brut: Whatever.
 .
 ~town_anger = 0
-{tosh_skull:
+{tosh_angry:
 ~town_anger++
 }
 {smith_angry:

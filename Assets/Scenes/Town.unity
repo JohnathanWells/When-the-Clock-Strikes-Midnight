@@ -562,8 +562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   informationDiscovered:
-  - name: empty_house
-    value: 0
+  - name: claw_marks
+    value: 1
   messages:
   - An empty house. Its inhabitants left after the first death.~There are clawing
     marks on the frame.
@@ -984,6 +984,38 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   clearOnFinish: 0
+  WaitForClick: 1
+  OnPaused:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291573107}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnUnpaused:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291573107}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pauseOnLastString: 0
 --- !u!1001 &36040120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13296,6 +13328,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 942762337184432749, guid: b9c7a183a7a2e004cb24435cb080a708, type: 3}
   m_PrefabInstance: {fileID: 287759624}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &291573107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 291573108}
+  - component: {fileID: 291573110}
+  - component: {fileID: 291573109}
+  m_Layer: 5
+  m_Name: PauseIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &291573108
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291573107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 391161187}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -10, y: 10}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &291573109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291573107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -5520997353274881969, guid: 7a3bc68b2bcdce543ab4dc0e9c82e331, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &291573110
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291573107}
+  m_CullTransparentMesh: 1
 --- !u!1001 &293970823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15707,6 +15814,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1531305973}
+  - {fileID: 291573108}
   m_Father: {fileID: 434990969}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16834,6 +16942,7 @@ GameObject:
   - component: {fileID: 434990971}
   - component: {fileID: 434990970}
   - component: {fileID: 434990972}
+  - component: {fileID: 434990973}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -16876,7 +16985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.49411765}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16914,6 +17023,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 10, y: 10, z: 10, w: 10}
   m_Softness: {x: 1, y: 1}
+--- !u!114 &434990973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434990968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 434990970}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 35618188}
+        m_TargetAssemblyTypeName: SubtitleManager, Assembly-CSharp
+        m_MethodName: SetTextPause
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &443038119
 GameObject:
   m_ObjectHideFlags: 0
@@ -50577,6 +50742,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   clearOnFinish: 1
+  WaitForClick: 0
+  OnPaused:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnpaused:
+    m_PersistentCalls:
+      m_Calls: []
+  pauseOnLastString: 0
 --- !u!114 &1263932310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50598,7 +50771,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263932302}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e512c5e69bf5bd4cbee86524f64e6c9, type: 3}
   m_Name: 
@@ -50606,9 +50779,9 @@ MonoBehaviour:
   displayArea: {fileID: 1047783136}
   textPrefab: {fileID: 5232061056178325597, guid: 064c4a4c917eb0a4988e3dcb5e006694, type: 3}
   paragraphs:
-  - Eight times will the bell ring.
+  - Eight times the bell will ring.
   - Seven men outside waiting.
-  - Six full moons since Philip.
+  - Six full moons since Phillip.
   - Five more now buried deep.
   - Four more hours left tonight.
   - Three lone homes with no light.
@@ -50616,11 +50789,11 @@ MonoBehaviour:
   - One more will <color=white>live</color> or <color=red>die</color>.
   spaceBetweenParagraphs: 1
   pauseMenu: {fileID: 1263932303}
-  fadeInTime: 0.8
+  fadeInTime: 1
   fadeOutTime: 2
   timeBefore: 0.5
   timeBetween: 1.5
-  timeAfter: 0.5
+  timeAfter: 0.7
   startupTime: 0.7
   onStart:
     m_PersistentCalls:
@@ -60665,7 +60838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb890faf6cc91504694ee086368ac673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsPerCharacter: 0.1
+  secondsPerCharacter: 0.01
   conversation: {fileID: 4900000, guid: 414382a635fac8645a76707d11094452, type: 3}
   OnConversationStart:
     m_PersistentCalls:
@@ -90253,7 +90426,7 @@ MonoBehaviour:
   - name: tomb_smith_wife
     value: 1
   messages:
-  - '"Sarah Smith (1523 - 1545)~Beloved wife and mother."'
+  - '"Ann Smith (1523 - 1545)~Beloved wife and mother."'
   nextMessage: 0
   messageCooldown: 1
 --- !u!23 &1861060612012462941
@@ -101039,7 +101212,7 @@ GameObject:
   - component: {fileID: 345942900}
   - component: {fileID: 4304678113054339907}
   m_Layer: 0
-  m_Name: Sarah Tomb
+  m_Name: Ann Tomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

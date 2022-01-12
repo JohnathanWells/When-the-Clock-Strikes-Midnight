@@ -12,6 +12,8 @@ VAR _temp = 0
 VAR brut_angry = 0
 VAR town_anger = 0
 VAR ale_angry = 0
+VAR tosh_angry = 0
+
 ->Intro
 
 ==Intro==
@@ -125,7 +127,7 @@ The Doctor: Since Father Wright locked all the women and children in the chapel,
 The Doctor: And with you too!
 .
 ~town_anger = 0
-{tosh_skull:
+{tosh_angry:
 ~town_anger++
 }
 {smith_angry:

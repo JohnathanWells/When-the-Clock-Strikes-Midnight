@@ -7,10 +7,12 @@ VAR smith_Ann_midnight = 0
 VAR church_letter = 0
 VAR doctor_wife = 0
 VAR tosh_skull = 0
+VAR claw_marks = 0
 VAR ale_night_tosh = 0
 VAR brut_angry = 0
 VAR town_anger = 0
 VAR ale_angry = 0
+VAR tosh_angry = 0
 
 ->Intro
 
@@ -24,6 +26,7 @@ John Smith: Hello Father. Tell me how can I help you so we can all go back insid
 +[Anything suspicious these last couple of months?] ->Suspicious
 +[I'm sorry for your loss.]->Son_Mother
 *{church_letter>0}[Do you recognize this letter?] ->Letter
+*{claw_marks}[What are the marks on your neighbor's door]->Claws
 
 ==Son==
 John Smith: Bloody bored of being stuck inside all day. 
@@ -93,11 +96,18 @@ John Smith: No. Why would you even think it is mine?
         ->Hub
 
 
+==Claws==
+John Smith: Huh? On the Loom house? They weren't there last we checked.
++   [When is that?]
+    John Smith: I don't know... the day after Ann died?
+    John Smith: Never seen clawing marks anywhere else either. Maybe someone carved them to distract you?
+    ->Hub
+
 ==Leave==
 John Smith: Fine.
 .
 ~town_anger = 0
-{tosh_skull:
+{tosh_angry:
 ~town_anger++
 }
 {smith_angry:
