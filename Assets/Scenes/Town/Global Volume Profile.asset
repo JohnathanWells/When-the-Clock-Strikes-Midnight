@@ -400,7 +400,7 @@ MonoBehaviour:
     m_Value: 1
   fogFalloffMode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   blendMode:
     m_OverrideState: 1
     m_Value: 0

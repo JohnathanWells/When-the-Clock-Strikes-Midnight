@@ -30,6 +30,21 @@ public class PlayerController : MonoBehaviour
         OnControlON.Invoke();
     }
 
+    public void StopRigidbody(Rigidbody rb)
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
+
+    public void SetRBKinematic(Rigidbody rb)
+    {
+        rb.isKinematic = true;
+    }
+    public void SetRBNotKinematic(Rigidbody rb)
+    {
+        rb.isKinematic = false;
+    }
+
     public void MouseControl(bool to)
     {
         if (to)
