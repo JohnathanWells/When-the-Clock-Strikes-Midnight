@@ -36,14 +36,14 @@ Mr. Ale: Oh, the whole 'murderer' thing? No one knows who did it...
 }
     +   {ale_angry == 0}[But...?]
         Mr. Ale: But nothing, I don't like talking behind people's back or spreading rumors.
-        Mr. Ale: ...That said... Joe wasn't very liked. He was the only barber in town, and a bloody good one at that, but he was also... difficult to be around.
-        Mr. Ale: He also didn't grow up here. That didn't help.
+        Mr. Ale: ...That said... Joe wasn't very well liked. He was the only barber in town, and a bloody good one at that, but he was also... difficult to be around.
+        Mr. Ale: He didn't grow up here either. That didn't help.
     +   +   [Where was he from?]
             Mr. Ale: Supposedly he came from a city. Wanting a quiet life and all that. 
     +   +   +   ['Supposedly']
-                Mr. Ale: Well... rumor has it he didn't chose to leave, and that's all I'll elaborate. If you want to know more, you should talk to Greg or Brut. 
+                Mr. Ale: Well... rumor has it he didn't chose to leave, and that's all I'll say. If you want to know more, you should talk to Greg or Brut. 
                 
-                Mr. Ale: I'm actually surprised someone put a headstone to begin with, we only found some of his thorn bloodied clothes in the woods.
+                Mr. Ale: I'm actually surprised someone put a headstone to begin with, we only found some of his thorn-bloodied clothes in the woods.
                 ~joe_remains = 1
                 {joe_rumors == 0: 
                 ~joe_rumors = 1

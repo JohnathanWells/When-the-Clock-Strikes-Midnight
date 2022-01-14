@@ -48,12 +48,15 @@ Brut: I don't need you pity.
 
 
 =Maria
-Brut: You are either very brave or a fool to ask me something like that. You're lucky to be a man of the cloth, or I would teach you a lesson regardless.
+Brut: You are either very brave or a fool to ask me something like that. In either case, you're lucky to be a man of the cloth right now.
 ~brut_stress_2 = 1
 + [Let's change the subject]->Hub
 
 =Victoria
 Brut: She killed herself.
++   [Let's change the subject.]
+    Brut: Thank you.
+    ->Hub
 +   [Didn't the monster kill her?]
     Brut: Sure, after she walked into the woods at midnight.
     Brut: She was devastated after what happened to Maria. Then, a week before her death, she suddenly went back to her old self.
@@ -71,7 +74,7 @@ Brut: She killed herself.
         Brut: Nothing that night. Father Wright was with me and convinced me to go back to town eventually. I would be buried next to her if I hadn't.
         Brut: As soon as the sun came out we went back with Greg and John and... 
         Brut: ...She was so close... I might have even walked next to her the night before...
-        Brut: She wasn't as mauled as the others, Father Michael's pressence must have scared the demon away before it could finish... Yet...
+        Brut: She wasn't as mauled as the others, Father Wright's presence must have scared the demon away before it could finish... Yet...
         (Brut seems distraught by the memories of that day.)
         ~brut_stress_0 = 1
 +   +   +   [I'm sorry you had to experience that.]
@@ -98,6 +101,8 @@ Brut: Yeah, what about it.
     +{joe_rumors} [Did you do it?]
         Brut: Yes. 
         ~tomb_joe = 2
+    +   +   [I have other questions.]
+            ->Hub
     +   +   [Why?]
             Brut: Because he killed my little girl, that's why.
             Brut: Everyone blamed it on the demon or whatever, but we all heard the rumors about Joe. It's a bloody miracle it took him so long to do what he did.
@@ -105,8 +110,8 @@ Brut: Yeah, what about it.
             ~brut_daughter_killer = 1
 -   -   -   -   ->Joe_Interrogation
     +{joe_rumors == 0} [Do you know who did it?]
-        Brut: Maybe. Joe wasn't well liked. 
-        Brut: I am not going to tell on anyone, though.
+        Brut: Maybe. No one really liked Joe very much. 
+        Brut: I am not telling on anyone, though.
         ->Hub
 =Joe_Interrogation
     +   +   +   [Did you kill him?]
@@ -119,7 +124,7 @@ Brut: Yeah, what about it.
                 ->Joe_Interrogation
     +   +   +   [Do you have proof of this?]
                 Brut: His business was closed that entire day, which was odd for him. Didn't think much of it. But then it started to get dark, and Maria wasn't back from playing with Ale's son...
-                Brut: The next morning... God, if only I had paid him a visit...
+                Brut: Then the next morning came and... God, if only I had paid him a visit...
                 (Brut seems distraught by the memories of that day.)
                 ~brut_stress_1 = 1
                 ->Joe_Interrogation
@@ -138,6 +143,8 @@ Brut: Yeah, what about it.
 
 ==Accusations==
 Brut: That bloody doctor. There is something odd about him. He talks as if he's better than us, and showed up the same week Phillip died. 
++   [I have other questions.]
+    ->Hub
 +   [But?]
     Brut: He has an allibi for most deaths. Father Wright vouched for him on three occassions, Mr. Ale on two, Joe once.
     Brut: Still, I don't trust him. There is something wrong about him...

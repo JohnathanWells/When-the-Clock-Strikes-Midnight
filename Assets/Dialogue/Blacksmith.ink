@@ -89,7 +89,7 @@ John Smith: Can't really say I've noticed anything particularly strange. Things 
 ==Letter==
 John Smith: No. Why would you even think it is mine?
 +   [Not a lot of literate married men here]
-    John Smith: The doctor is married, I saw his wedding ring once. He may a better candidate if you ask me. And you are asking me.
+    John Smith: The doctor is married, I saw his wedding ring once. He may be a better candidate if you ask me. And you are asking me.
     ~doctor_wife = 1
 +   +   [Thank you.]
         John Smith: Yeah.

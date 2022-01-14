@@ -17,6 +17,7 @@ VAR brut_angry = 0
 VAR town_anger = 0
 VAR ale_angry = 0
 VAR tosh_angry = 0
+VAR greg_seen_letter = 0
 
 ->Intro
 
@@ -28,10 +29,10 @@ Greg the Farmer: Blessed evening Father, how can I help you?
 +[(Leave) May God be with you.]->Leave
 +{(greg_bloodstain or greg_bloodtrail)}[There's blood behind your house.]->Bloodstains_1
 +{greg_skull==1}[There is a small skull in your fields.]->Skull
-+{church_letter==2}[Can we go over the letter again?]
++{greg_seen_letter}[Can we go over the letter again?]
     Greg the Farmer: Sure thing, Father.
     ->Letter
-*{church_letter == 1}[Do you recognize this letter?]
+*{church_letter > 0 and greg_seen_letter == 0}[Do you recognize this letter?]
     Greg the Farmer: I can't say I understand a word in that piece of paper, could you read it out to me? 
 +   +   [(Read letter out loud.)] 
     Greg the Farmer: I see... well...
@@ -76,6 +77,7 @@ Greg the Farmer: I can't say I understand a word in that piece of paper, could y
     Greg the Farmer: Which only leaves Mr Ale and John Smith.
     {church_letter==1:Greg the Farmer: As to who it's for, I have no idea. Let me know if you find out anything.}
     ~church_letter = 2
+    ~greg_seen_letter = 1
     ->Hub
 
 ==Skull==
@@ -85,9 +87,9 @@ Greg the Farmer: Sorry Father, I really don't know who it belongs to. I had neve
 
 ==Joe_Tomb==
 Greg the Farmer: Oh, that... 
-Greg the Farmer: Well... Joe had quite the reputation. It was only rumors, so no one did anything about it, but after all this started with Phillip those rumors sounded more... dangerous.
-Greg the Farmer: I don't think Joe was a murderer, at least not in his time here, but he's as likely to be responsible for some of the deaths as he is not.
-Greg the Farmer: That is all I will say on the matter. 
+Greg the Farmer: Well... Joe had quite the reputation. It was only rumors, so no one did anything about it, but after all this started with Phillip they started to sound more... dangerous.
+Greg the Farmer: I think Joe came here to changed his ways, but no one knows for sure that he did.
+Greg the Farmer: That's all I will say on the matter. 
 ~joe_rumors = 1
 ->Hub
 
@@ -104,7 +106,7 @@ Greg the Farmer: Smith Jr. barely leaves his house since his mom died. A weird k
 ~smith_hermit = 1
 Greg the Farmer: That doctor in the market gives me the creeps. There's some rumors about him, you might want to ask Mr. Ale about them.
 ~doctor_rumors = 1
-Greg the Farmer: That is all.
+Greg the Farmer: That's all.
 ->Hub
 
 ==Leave==

@@ -56,7 +56,7 @@ The Doctor: Everyone was so frustrated at my allibi, they didn't stop to ask if 
 =Past_Outfit
 The Doctor: It protects me from miasma, and conveniently hides my face.
 +   [Why do you hide your face?]
-    The Doctor: People are more likely to let you treat them when they don't see the scarring on your face.
+    The Doctor: People are more likely to let you treat them when they don't see the scarring on your face hehe.
     ->Past_Questions
 +   [Why do you need to protect yourself from miasma?]
     The Doctor: You never know where illness may be hiding!
@@ -71,8 +71,7 @@ The Doctor: It protects me from miasma, and conveniently hides my face.
 ==Rumors==
 The Doctor: Sorry Father, you will have to be more specific.
 +   [(Retell rumor about empty uniform).]
-    The Doctor: Oh, it's just rumors. These people fear me, so they make things up about me.
-    (The question has made the doctor nervous)
+    The Doctor: Oh, it's just rumors. These people fear me, so they make things up about me hehe.
     ->Hub
 +   [Sounds from house.]
     The Doctor: That's just my equipment. Nothing you haven't seen where you are from, but it frightens those in town.
@@ -86,7 +85,7 @@ The Doctor: Hmm I can't say I do. Why do you ask?
     ->Letter_2
 =Letter_2
 +   +   {church_letter > 1}[Greg cannot read.]
-        The Doctor: Oh, is that what he says? Uhh... Then forget I said anything!
+        The Doctor: Oh, is that what he says? Uhh... Then forget I said anything! 
         ~church_letter = 5
         ->Hub
 -   +    ->Hub
@@ -107,7 +106,7 @@ The Doctor: How many people did the demon kill? All of them? Some of them? None 
 +   +   [What should I do?]
         ->Opinion_2
 +   {tosh_skull and phillip_remains_found}[The demon is real. I have seen it.]
-    The Doctor: Really? Could you see anyone else as well? I wonder if there's a connection if that's the case...
+    The Doctor: Really? Was there anyone around when you saw it? I wonder if there's a connection if that's the case...
     ->Hub
     
 =Opinion_2
@@ -116,7 +115,7 @@ The Doctor: When the clock strikes midnight you will still have to make a decisi
 ->Hub
 
 ==Wife==
-The Doctor: My wife...? Oh... She's dead. I'm not as young behind this mask as I might sound he he.
+The Doctor: My wife...? Oh... She's dead. I'm not as young behind this mask as I might sound hehe.
 ->Hub
 
 ==Wright_Death==
