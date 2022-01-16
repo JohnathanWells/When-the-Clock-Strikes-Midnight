@@ -28,6 +28,7 @@ Mr. Ale: Good evening Reverend, let me know how I can help.
 *{church_letter}[Do you recognize this letter?]->Letter
 +[Have you seen anything interesting?]->Information
 +[How is your family?]->Family
+*{phillip_remains_found}[I found a skeleton in the well.]->Phillip_remains
 
 ==Joe_Tomb==
 Mr. Ale: Oh, the whole 'murderer' thing? No one knows who did it...
@@ -71,18 +72,23 @@ Mr. Ale: No! Of course not!
             (The accusation seems to have angered him.)
     -   -   ->Hub
     +   +   {phillip_remains_found}[I found a skeleton in the well.]
-            Mr. Ale: Are you serious? Oh my god...
-            Mr. Ale: We buried Phillip though, could it have been someone else's? 
-            Mr. Ale: I wonder how long it's been there? I have admittely never examined it too closely, but the water never tasted any different from the other well... 
-            Mr. Ale: This is bloody inconvenient. Did you find out something else?
-    +   +   +   [No. But I have more questions.]
-                Mr. Ale: Sure, go ahead.
-    -   -   -   ->Hub
+            ->Phillip_remains
+            
+    
+==Phillip_remains==
+Mr. Ale: Are you serious? Oh my god...
+Mr. Ale: We buried Phillip though, could it have been someone else's? 
+Mr. Ale: I wonder how long it's been there? I have admittely never examined it too closely, but the water never tasted any different from the other well... 
+Mr. Ale: This is bloody inconvenient. Did you find out something else?
++   [No. But I have more questions.]
+    Mr. Ale: Sure, go ahead.
+    ->Hub
+
     
 ==Letter==
 Mr. Ale: Should I?
 +   [Not a lot of literate married men here]
-    Mr. Ale: Sorry Father, can't say I recognize this letter. My writing is quite different as well, you can see it on the sign outside.
+    Mr. Ale: Sorry Father, can't say I do. My writing is quite different as well, you can see it on the sign outside.
     (This appears to be true.)
     ->Hub
 

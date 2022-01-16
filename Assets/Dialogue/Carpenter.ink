@@ -94,6 +94,7 @@ Brut: You can feel it in the air, the sounds of the night, the shivers on your s
 ==Drinking==
 Brut: What about it, Father? Are you going to sermon a widower for drinking his sorrows away?
 Brut: If that's the case, why don't you save us both some time and shove the sermon up your rear.
+~brut_stress_2 = 1
 ->Hub
 
 ==Joe==

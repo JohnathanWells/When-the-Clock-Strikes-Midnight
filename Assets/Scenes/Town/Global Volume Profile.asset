@@ -102,7 +102,7 @@ MonoBehaviour:
     max: 1
   affineTextureWarping:
     m_OverrideState: 1
-    m_Value: 0.03
+    m_Value: 0.005
     min: 0
     max: 1
   framebufferDither:
@@ -120,7 +120,7 @@ MonoBehaviour:
     m_Value: 0
   drawDistance:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 97.6
     min: 0
 --- !u!114 &-2096421278500997704
 MonoBehaviour:
@@ -406,7 +406,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.84518075, g: 0.84518075, b: 0.915, a: 1}
+    m_Value: {r: 0.037239995, g: 0.03799999, b: 0.056999996, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -427,7 +427,7 @@ MonoBehaviour:
     min: 0
   distanceMax:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 90
     min: 0.00001
   fogFalloffCurve:
     m_OverrideState: 0

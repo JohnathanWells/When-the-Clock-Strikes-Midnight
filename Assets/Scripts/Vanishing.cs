@@ -20,11 +20,14 @@ public class Vanishing : MonoBehaviour
     private void Update()
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+
         if (!seen && pos.x >= 0 && pos.x <= Screen.width 
             && pos.y >= 0 && pos.y <= Screen.height 
-            && ((!Physics.Raycast(Camera.main.transform.position, (transform.position - Camera.main.transform.position).normalized, solidLayers)
+            && (
+            (!Physics.Raycast(Camera.main.transform.position, (transform.position - Camera.main.transform.position).normalized, solidLayers)
             && (transform.position - Camera.main.transform.position).magnitude <= maxDistance)
-            || (transform.position - Camera.main.transform.position).magnitude <= minDistance))
+            || 
+            (transform.position - Camera.main.transform.position).magnitude <= minDistance))
         {
             seen = true;
             col = renderer.material.GetColor("_MainColor");

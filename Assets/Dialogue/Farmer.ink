@@ -34,9 +34,12 @@ Greg the Farmer: Blessed evening Father, how can I help you?
     ->Letter
 *{church_letter > 0 and greg_seen_letter == 0}[Do you recognize this letter?]
     Greg the Farmer: I can't say I understand a word in that piece of paper, could you read it out to me? 
++   +   [Maybe later.]
+        Greg the Farmer: Aight.
+        ->Hub
 +   +   [(Read letter out loud.)] 
-    Greg the Farmer: I see... well...
-    ->Letter
+        Greg the Farmer: I see... well...
+        ->Letter
 //+{church_letter==5}[You lied to me about the letter]->Bloodstains_3
 +{joe_rumors and tomb_joe == 1}[Do you know who vandalized Joe's tomb?]->Joe_Tomb
 +[How is your family?]->Family
@@ -88,7 +91,7 @@ Greg the Farmer: Sorry Father, I really don't know who it belongs to. I had neve
 ==Joe_Tomb==
 Greg the Farmer: Oh, that... 
 Greg the Farmer: Well... Joe had quite the reputation. It was only rumors, so no one did anything about it, but after all this started with Phillip they started to sound more... dangerous.
-Greg the Farmer: I think Joe came here to changed his ways, but no one knows for sure that he did.
+Greg the Farmer: I think Joe came here to change his ways, but no one knows for sure that he did.
 Greg the Farmer: That's all I will say on the matter. 
 ~joe_rumors = 1
 ->Hub

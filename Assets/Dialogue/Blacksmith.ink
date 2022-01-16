@@ -33,6 +33,9 @@ John Smith: Bloody bored of being stuck inside all day.
     +{smith_squirrel}[Tosh says he saw him kill a squirrel the other day.] ->Son_Squirrel
     *{smith_hermit}[They say he has been reclusive lately.]
         John Smith: He has been taking the death of his mother pretty harshly.
+    +   +   [Let's talk about something else.]
+            John Smith: Yeah, let's.
+            ->Hub
     +   +   [My condolences...]->Son_Mother
     +   [It's for his own good.]
         John Smith: I fail to see how isolating my kid will protect him. Ann and Phillip were both inside their houses and alone when the monster got them.

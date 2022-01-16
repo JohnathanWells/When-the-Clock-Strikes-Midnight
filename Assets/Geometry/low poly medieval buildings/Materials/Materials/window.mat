@@ -63,9 +63,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6f8fb34e28f509c4c98d9e3ab6caf162, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0.7}
+        m_Texture: {fileID: 2800000, guid: daab7b07751e96d4e9d90722a3ecf3aa, type: 3}
+        m_Scale: {x: 1, y: 0.5}
+        m_Offset: {x: 0, y: 0.94}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 17e46e048f182cd48b702a46bf7f72a2, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -161,7 +161,7 @@ Material:
     - _Color: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _DrawDistanceOverride: {r: 100, g: 10000, b: 0, a: 0}
-    - _EmissionColor: {r: 0.44966155, g: 0.4716981, b: 0.08677466, a: 1}
+    - _EmissionColor: {r: 0.64783335, g: 0.676, b: 0.12393334, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _PrecisionColorOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
     - _PrecisionGeometryOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
