@@ -15,11 +15,11 @@ D:/UnityProjects/When the Clock Strikes Midnight
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56499
+53740
 Successfully changed project path to: D:/UnityProjects/When the Clock Strikes Midnight
 D:/UnityProjects/When the Clock Strikes Midnight
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 77.49 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 84.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.10f1 (297d780c91bc)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -36,346 +36,272 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56812
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002573 seconds.
+Registered in 0.002947 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 75.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 91.95 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.328 seconds
+- Completed reload, in  1.503 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004265 seconds.
+Registered in 0.004912 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 77.17 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 82.31 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.756 seconds
+- Completed reload, in  1.866 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.39 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3166 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 245.6 MB.
+System memory in use before: 245.7 MB.
 System memory in use after: 245.7 MB.
 
 Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 3642.
-Total: 3.224700 ms (FindLiveObjects: 0.373800 ms CreateObjectMapping: 0.095300 ms MarkObjects: 2.488300 ms  DeleteObjects: 0.266000 ms)
+Total: 5.655000 ms (FindLiveObjects: 0.746000 ms CreateObjectMapping: 0.153000 ms MarkObjects: 4.325800 ms  DeleteObjects: 0.427600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a5a1e633e68b1599fc38714beb45c3') in 0.131830 seconds
-  Import took 0.137812 seconds .
+  path: Assets/Geometry/low poly medieval buildings/smith.fbx
+  artifactKey: Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Geometry/low poly medieval buildings/smith.fbx using Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '453880469134083224bd37ba0149e9b0') in 0.360635 seconds
+  Import took 0.368668 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 95.841817 seconds.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd59012ecf3f8a50db35e732093704124') in 0.014296 seconds
-  Import took 0.020342 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 259.445753 seconds.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19aedd1db12423e4a96d6e460c480bd2') in 0.012652 seconds
-  Import took 0.018678 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.106988 seconds.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27f184f90712a61d571d1359618b6850') in 0.012355 seconds
-  Import took 0.037529 seconds .
+  Time since last request: 318.199122 seconds.
+  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/beam.mat
+  artifactKey: Guid(0a3493a84faf7a64ba93f872075b55ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/beam.mat using Guid(0a3493a84faf7a64ba93f872075b55ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dd541d995a612ff7520d654bebda048') in 0.055710 seconds
+  Import took 0.062514 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004926 seconds.
+Registered in 0.004606 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.12 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.856 seconds
+- Completed reload, in  2.090 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.07 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2967 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.5 MB.
-System memory in use after: 231.5 MB.
+System memory in use before: 236.6 MB.
+System memory in use after: 236.6 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3645.
-Total: 4.421400 ms (FindLiveObjects: 0.509000 ms CreateObjectMapping: 0.097600 ms MarkObjects: 3.369100 ms  DeleteObjects: 0.444400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 264.003736 seconds.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc9e527035b65bc2f454fbdf140cc5a') in 0.112572 seconds
-  Import took 0.119119 seconds .
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3746.
+Total: 3.553400 ms (FindLiveObjects: 0.377900 ms CreateObjectMapping: 0.096200 ms MarkObjects: 2.682600 ms  DeleteObjects: 0.395400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.450790 seconds.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed801071c2b490adca92bfba66ce9d4') in 0.012448 seconds
-  Import took 0.018228 seconds .
+  Time since last request: 193.255344 seconds.
+  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/ROOF_red.mat
+  artifactKey: Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/ROOF_red.mat using Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627f56f5585d19e93a68c1f505f1dffa') in 0.206294 seconds
+  Import took 0.214523 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 5.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.4 MB.
+System memory in use after: 178.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3809.
+Total: 71.912600 ms (FindLiveObjects: 0.592800 ms CreateObjectMapping: 0.094700 ms MarkObjects: 70.919600 ms  DeleteObjects: 0.304000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.878345 seconds.
+  Time since last request: 9838.835322 seconds.
   path: Assets/UI/ChoiceButton.prefab
   artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c28e87b247ee206036a831531fec3f37') in 0.011077 seconds
-  Import took 0.017135 seconds .
+Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4822425098d40e72a52abc9492726ab6') in 0.338544 seconds
+  Import took 0.352821 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.949047 seconds.
+  Time since last request: 16.006442 seconds.
   path: Assets/UI/ChoiceButton.prefab
   artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '493093e4fb23aac12a3227ac5ef54047') in 0.011070 seconds
-  Import took 0.016779 seconds .
+Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bfc0da628a912c5d71a226a3718a67a') in 0.014435 seconds
+  Import took 0.026117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.093820 seconds.
+  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/plaster 1.mat
+  artifactKey: Guid(1ebdba0d49e0a0e4981c728730f1fcdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/plaster 1.mat using Guid(1ebdba0d49e0a0e4981c728730f1fcdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aa024fd79c1eb6abe91727d78aa9807') in 0.037991 seconds
+  Import took 0.046670 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004486 seconds.
+Registered in 0.004508 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.564 seconds
+- Completed reload, in  1.805 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2967 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.5 MB.
-System memory in use after: 231.6 MB.
+System memory in use before: 236.7 MB.
+System memory in use after: 236.8 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3648.
-Total: 3.522900 ms (FindLiveObjects: 0.383600 ms CreateObjectMapping: 0.100600 ms MarkObjects: 2.754900 ms  DeleteObjects: 0.281600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 98.702294 seconds.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bfc0da628a912c5d71a226a3718a67a') in 0.110123 seconds
-  Import took 0.116081 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.880601 seconds.
-  path: Assets/UI/ChoiceButton.prefab
-  artifactKey: Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/ChoiceButton.prefab using Guid(ce6947f19a029a0458486f59c96e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2cb6fbb75f6c649989eb1808d2e8cfc') in 0.014591 seconds
-  Import took 0.020612 seconds .
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3806.
+Total: 4.137400 ms (FindLiveObjects: 0.405200 ms CreateObjectMapping: 0.094600 ms MarkObjects: 3.342800 ms  DeleteObjects: 0.293000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004285 seconds.
+Registered in 0.004539 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.549 seconds
+- Completed reload, in  3.128 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2967 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.6 MB.
-System memory in use after: 231.6 MB.
+System memory in use before: 236.7 MB.
+System memory in use after: 236.8 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3651.
-Total: 3.204800 ms (FindLiveObjects: 0.359900 ms CreateObjectMapping: 0.097500 ms MarkObjects: 2.473500 ms  DeleteObjects: 0.273100 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3809.
+Total: 4.048200 ms (FindLiveObjects: 0.515200 ms CreateObjectMapping: 0.100300 ms MarkObjects: 3.109900 ms  DeleteObjects: 0.320500 ms)
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 4.13 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.5 MB.
+System memory in use after: 178.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3809.
+Total: 3.618300 ms (FindLiveObjects: 0.391400 ms CreateObjectMapping: 0.094300 ms MarkObjects: 2.767300 ms  DeleteObjects: 0.364300 ms)
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 3.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.5 MB.
+System memory in use after: 178.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3809.
+Total: 3.379600 ms (FindLiveObjects: 0.372300 ms CreateObjectMapping: 0.090600 ms MarkObjects: 2.641100 ms  DeleteObjects: 0.274600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004519 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.854 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2967 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 236.8 MB.
+System memory in use after: 236.8 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3812.
+Total: 3.413200 ms (FindLiveObjects: 0.421800 ms CreateObjectMapping: 0.094000 ms MarkObjects: 2.591200 ms  DeleteObjects: 0.300700 ms)
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 3.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.5 MB.
+System memory in use after: 178.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3812.
+Total: 3.712900 ms (FindLiveObjects: 0.403600 ms CreateObjectMapping: 0.094700 ms MarkObjects: 2.927200 ms  DeleteObjects: 0.286300 ms)
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 3.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.5 MB.
+System memory in use after: 178.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3812.
+Total: 4.211200 ms (FindLiveObjects: 0.456000 ms CreateObjectMapping: 0.110400 ms MarkObjects: 3.291000 ms  DeleteObjects: 0.352100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 415.771479 seconds.
-  path: Assets/Geometry/low poly medieval buildings/smith.fbx
-  artifactKey: Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/smith.fbx using Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a962eea9e0cb5b7d9009e84049fb802') in 0.334059 seconds
-  Import took 0.340949 seconds .
+  Time since last request: 7729.518856 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(6853b22d94a114247ab632577d28dcfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(6853b22d94a114247ab632577d28dcfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '415035a16dd632ee75fed58e60d646e2') in 1.682369 seconds
+  Import took 1.783352 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.265398 seconds.
-  path: Assets/Geometry/low poly medieval buildings/smith.fbx
-  artifactKey: Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/smith.fbx using Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2aea6750ab53c721b13ebf61f426b75') in 0.024160 seconds
-  Import took 0.030067 seconds .
+  Time since last request: 2.659234 seconds.
+  path: Assets/Scenes/Results.unity
+  artifactKey: Guid(170e0543375ad2348b43531e36c26bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Results.unity using Guid(170e0543375ad2348b43531e36c26bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a78dde177567a8057c0017dd245c3781') in 0.011076 seconds
+  Import took 0.024606 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004751 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.931 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2967 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 236.8 MB.
+System memory in use after: 236.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3816.
+Total: 4.366700 ms (FindLiveObjects: 0.590700 ms CreateObjectMapping: 0.189200 ms MarkObjects: 3.301800 ms  DeleteObjects: 0.283200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.945121 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/beam.mat
-  artifactKey: Guid(0240ea6aee5284e48b9e6696b6fab5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/beam.mat using Guid(0240ea6aee5284e48b9e6696b6fab5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad42f86723f41418f460d2aef2da3621') in 0.042404 seconds
-  Import took 0.049647 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/plaster2.mat
-  artifactKey: Guid(dd9546eb9867929438fa45ad895b83af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/plaster2.mat using Guid(dd9546eb9867929438fa45ad895b83af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74b7c66983a09383feb0b057c71c681c') in 0.015226 seconds
-  Import took 0.020663 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/beam.mat
-  artifactKey: Guid(0240ea6aee5284e48b9e6696b6fab5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/beam.mat using Guid(0240ea6aee5284e48b9e6696b6fab5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad42f86723f41418f460d2aef2da3621') in 0.009302 seconds
-  Import took 0.016137 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/plaster.mat
-  artifactKey: Guid(50318ce8381a440488ab4d8ac4f54937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/plaster.mat using Guid(50318ce8381a440488ab4d8ac4f54937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b350fb6fc9403d75cfff613e39634f3') in 0.014269 seconds
-  Import took 0.020586 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000330 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/roof_2.mat
-  artifactKey: Guid(aa69e254f8365a94b860e0b92965cc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/roof_2.mat using Guid(aa69e254f8365a94b860e0b92965cc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea87e9378bda204408200e9fbd3813e4') in 0.032975 seconds
-  Import took 0.038820 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000227 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/buildings_3.mat
-  artifactKey: Guid(bb5dcda55a5c8644eaf5539e4eca7670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/buildings_3.mat using Guid(bb5dcda55a5c8644eaf5539e4eca7670) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cbc5c951ddcd9a9775f6490234a84af') in 0.019410 seconds
-  Import took 0.024863 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/planks.mat
-  artifactKey: Guid(014c055aa5c3f444b845b9fdad1353bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/planks.mat using Guid(014c055aa5c3f444b845b9fdad1353bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f1456076d50637cdb0a3e8ab243960') in 0.014087 seconds
-  Import took 0.019948 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.974865 seconds.
-  path: Assets/Geometry/low poly medieval buildings/smith.fbx
-  artifactKey: Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/smith.fbx using Guid(8e087afc636a7f643a64e9a824233e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85763cceae0f807bb71dd5f3bfd74494') in 0.019319 seconds
-  Import took 0.025526 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 78.461302 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/ROOF_red.mat
-  artifactKey: Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/ROOF_red.mat using Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c2aade94d18ceae316d882afccc222') in 0.029160 seconds
-  Import took 0.035100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/window.mat
-  artifactKey: Guid(0d1d264f724148847bc824fb4596477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/window.mat using Guid(0d1d264f724148847bc824fb4596477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95abb2d87f66fc44e2b6d4b908bb7e38') in 0.015855 seconds
-  Import took 0.021581 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/ROOF_red.mat
-  artifactKey: Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/ROOF_red.mat using Guid(e31e150dccf379f4792f1855e6d7d9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c2aade94d18ceae316d882afccc222') in 0.013690 seconds
-  Import took 0.018962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/window.mat
-  artifactKey: Guid(0d1d264f724148847bc824fb4596477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/window.mat using Guid(0d1d264f724148847bc824fb4596477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95abb2d87f66fc44e2b6d4b908bb7e38') in 0.016268 seconds
-  Import took 0.022560 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 129.868596 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/buildings_3.mat
-  artifactKey: Guid(b73f5ec2fcc399444b4d34a07b93490f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/buildings_3.mat using Guid(b73f5ec2fcc399444b4d34a07b93490f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fdeb5d498c883f6a32d96b6977d3591') in 0.017834 seconds
-  Import took 0.024167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/planks.mat
-  artifactKey: Guid(1efe31d4d21c6c84eacc7718bb26f45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/planks.mat using Guid(1efe31d4d21c6c84eacc7718bb26f45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05580f69b16628cebdd5c56fb9775597') in 0.018859 seconds
-  Import took 0.025383 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000464 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/plaster2.mat
-  artifactKey: Guid(4b0f4136bb2449e408adf68c6b9a04fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/plaster2.mat using Guid(4b0f4136bb2449e408adf68c6b9a04fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ab31c4aadfa2d084e439d95b6b2f898') in 0.016893 seconds
-  Import took 0.023280 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/plaster.mat
-  artifactKey: Guid(b600b659bd31c8d4a8fa16114dd45911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/plaster.mat using Guid(b600b659bd31c8d4a8fa16114dd45911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dce6aa0aac2fa6f58a6f978b77b165f') in 0.022119 seconds
-  Import took 0.027661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 256.304656 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/window.mat
-  artifactKey: Guid(0d1d264f724148847bc824fb4596477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/window.mat using Guid(0d1d264f724148847bc824fb4596477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4408e89dc0306e5b7ebe56ba4d7f8266') in 0.020855 seconds
-  Import took 0.027233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/wood 1.mat
-  artifactKey: Guid(309716b9acbbbde4f90aad216af129bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/wood 1.mat using Guid(309716b9acbbbde4f90aad216af129bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135759815b4e91a94b5cf46ca26a3502') in 0.016040 seconds
-  Import took 0.047231 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.011903 seconds.
-  path: Assets/Geometry/low poly medieval buildings/Materials/Materials/wood 1.mat
-  artifactKey: Guid(309716b9acbbbde4f90aad216af129bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Geometry/low poly medieval buildings/Materials/Materials/wood 1.mat using Guid(309716b9acbbbde4f90aad216af129bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135759815b4e91a94b5cf46ca26a3502') in 0.016746 seconds
-  Import took 0.022861 seconds .
+  Time since last request: 556.767411 seconds.
+  path: Assets/Scenes/Town.unity
+  artifactKey: Guid(8068b156ae848f442802aed337a81951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Town.unity using Guid(8068b156ae848f442802aed337a81951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '207939d8580d98a5ffd35639ab40c5eb') in 0.190254 seconds
+  Import took 0.217337 seconds .
 

@@ -71,18 +71,18 @@ MonoBehaviour:
   m_AdvancedMode: 0
   geometryEnabled:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   geometry:
     m_OverrideState: 1
     m_Value: 1
     min: 0
     max: 1
   geometryPushbackEnabled:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0
   geometryPushbackMinMax:
-    m_OverrideState: 0
-    m_Value: {x: 0, y: 0}
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0.10878444}
     min: 0
     max: 10
   color:
@@ -102,7 +102,7 @@ MonoBehaviour:
     max: 1
   affineTextureWarping:
     m_OverrideState: 1
-    m_Value: 0.005
+    m_Value: 0.008
     min: 0
     max: 1
   framebufferDither:
@@ -406,7 +406,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.037239995, g: 0.03799999, b: 0.056999996, a: 1}
+    m_Value: {r: 0.894, g: 0.894, b: 0.894, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1

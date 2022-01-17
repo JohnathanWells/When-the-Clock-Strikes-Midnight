@@ -13,6 +13,7 @@ VAR brut_angry = 0
 VAR town_anger = 0
 VAR ale_angry = 0
 VAR tosh_angry = 0
+VAR greg_seen_letter = 0
 
 ->Intro
 
@@ -67,6 +68,9 @@ John Smith: Tosh can go to hell.
     
 ==Son_Mother==
 John Smith: Yeah...
+    +   [Let's talk about something else.]
+        John Smith: Mhm...
+        ->Hub
     +   [What happened that night?]
         John Smith: The three of us... had a fight. I went to get drunk at the tavern, Junior came to get me when it started to get dark.
         John Smith: We hung out for a couple of hours while we cooled down and made up. When we came back home it was already past midnight and Ann was...
@@ -119,7 +123,7 @@ John Smith: Fine.
 {brut_angry:
 ~town_anger++
 }
-{church_letter > 1:
+{greg_seen_letter:
 ~town_anger++
 }
 {ale_angry:

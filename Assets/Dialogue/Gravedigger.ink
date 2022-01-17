@@ -11,6 +11,7 @@ VAR brut_angry = 0
 VAR church_letter = 0
 VAR town_anger = 0
 VAR ale_angry = 0
+VAR greg_seen_letter = 0
 
 ->Intro
 
@@ -159,7 +160,7 @@ Tosh: I saw Brut leave his house on Monday.
 {brut_angry:
 ~town_anger++
 }
-{church_letter > 1:
+{greg_seen_letter:
 ~town_anger++
 }
 {ale_angry:

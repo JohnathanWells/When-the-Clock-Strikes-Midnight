@@ -101,7 +101,7 @@ Greg the Farmer: They're doing fine, for the most part. Don't like being stuck i
 ->Hub
 
 ==Strange==
-Greg the Farmer: Well, I don't like saying bad things about anyone... But...
+Greg the Farmer: Well, I don't really like gossip... But if it will help your investigation...
 Greg the Farmer: I'm almost sure I saw Tosh digging something up from the graveyard the other day.
 Greg the Farmer: Brut has been drinking heavily since he lost his wife and kid. 
 ~brut_drinking = 1
@@ -129,7 +129,7 @@ Greg the Farmer: That's all.
 {brut_angry:
 ~town_anger++
 }
-{church_letter > 1:
+{greg_seen_letter:
 ~town_anger++
 }
 {ale_angry:

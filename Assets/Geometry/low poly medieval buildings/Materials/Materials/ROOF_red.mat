@@ -118,7 +118,7 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DoubleSidedNormalMode: 0
-    - _DrawDistanceOverrideMode: 0
+    - _DrawDistanceOverrideMode: 2
     - _DstBlend: 0
     - _EmissionBakedMultiplier: 1
     - _EnvironmentReflections: 1
@@ -160,7 +160,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
-    - _DrawDistanceOverride: {r: 100, g: 10000, b: 0, a: 0}
+    - _DrawDistanceOverride: {r: 110, g: 12100, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _PrecisionColorOverrideParameters: {r: 0, g: 0, b: 0, a: 0}

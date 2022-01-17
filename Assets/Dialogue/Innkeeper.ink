@@ -14,11 +14,12 @@ VAR smith_angry = 0
 VAR brut_angry = 0
 VAR town_anger = 0
 VAR tosh_angry = 0
+VAR greg_seen_letter = 0
 
 ->Intro
 
 ==Intro==
-Mr. Ale: Good evening Reverend, let me know how I can help.
+Mr. Ale: Good evening Father, let me know how I can help.
 ->Hub
 
 ==Hub==
@@ -35,6 +36,9 @@ Mr. Ale: Oh, the whole 'murderer' thing? No one knows who did it...
 {ale_angry == 1: 
 (Mr. Ale doesn't seem interested in continuing the conversation.)
 }
+    +   [I have other questions.]
+        Mr. Ale: Yes, Father?
+        ->Hub
     +   {ale_angry == 0}[But...?]
         Mr. Ale: But nothing, I don't like talking behind people's back or spreading rumors.
         Mr. Ale: ...That said... Joe wasn't very well liked. He was the only barber in town, and a bloody good one at that, but he was also... difficult to be around.
@@ -42,8 +46,7 @@ Mr. Ale: Oh, the whole 'murderer' thing? No one knows who did it...
     +   +   [Where was he from?]
             Mr. Ale: Supposedly he came from a city. Wanting a quiet life and all that. 
     +   +   +   ['Supposedly']
-                Mr. Ale: Well... rumor has it he didn't chose to leave, and that's all I'll say. If you want to know more, you should talk to Greg or Brut. 
-                
+                Mr. Ale: Well... rumor has it he didn't chose to leave. That's all I'll say. If you want to know more, you should talk to Greg or Brut. 
                 Mr. Ale: I'm actually surprised someone put a headstone to begin with, we only found some of his thorn-bloodied clothes in the woods.
                 ~joe_remains = 1
                 {joe_rumors == 0: 
@@ -77,8 +80,8 @@ Mr. Ale: No! Of course not!
     
 ==Phillip_remains==
 Mr. Ale: Are you serious? Oh my god...
-Mr. Ale: We buried Phillip though, could it have been someone else's? 
-Mr. Ale: I wonder how long it's been there? I have admittely never examined it too closely, but the water never tasted any different from the other well... 
+Mr. Ale: Do you think it's Joe? We buried Phillip so it can't be him... 
+Mr. Ale: I wonder how long it's been there too. The water never tasted any different from the other well... 
 Mr. Ale: This is bloody inconvenient. Did you find out something else?
 +   [No. But I have more questions.]
     Mr. Ale: Sure, go ahead.
@@ -119,6 +122,15 @@ Mr. Ale: I have a believable and an incredible story. Which one would you like t
     +   [The unrealistic one.]->Unrealistic_Story
 
 =Realistic_Story
+Mr. Ale: I saw someone waiting next to the church the night Father Wright died, next to some crates. Couldn't tell who, sadly.
+    ~church_sighting = 1
+Mr. Ale: Not an exciting story, but I hope it helps.
+    +   [What about the other story?] ->Unrealistic_Story
+    +   [Let me ask you something else.]
+        Mr. Ale: Sure.
+        ->Hub
+    
+=Realistic_Story_OLD
 Mr. Ale: The night Father Wright died, he had gathered all the women and children in the church and locked them there overnight, right? Probably to see if someone still died that night. 
     +   [Well, someone did.]
     Mr. Ale: Right, which is how we know that the creature is disguised as a man. 
@@ -129,7 +141,6 @@ Mr. Ale: The night Father Wright died, he had gathered all the women and childre
     +   +   [Let me ask you something else.]
             Mr. Ale: Sure.
     -   -   ->Hub
-    
 
 =Unrealistic_Story
 Mr. Ale: You know that doctor in the market? They say there's no man under those clothes. 
@@ -157,7 +168,7 @@ Mr. Ale: Good luck.
 {brut_angry:
 ~town_anger++
 }
-{church_letter > 1:
+{greg_seen_letter:
 ~town_anger++
 }
 {ale_angry:

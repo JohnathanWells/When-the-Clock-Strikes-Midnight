@@ -26,7 +26,7 @@ public class WhisperScript : MonoBehaviour
             {
                 clipInd = Random.Range(0, (clips.Length - 1));
 
-            } while (clipInd == lastClipInd && !acceptRepeats);
+            } while (clipInd == lastClipInd && (!acceptRepeats && clips.Length > 1));
 
             source.PlayOneShot(clips[clipInd]);
 

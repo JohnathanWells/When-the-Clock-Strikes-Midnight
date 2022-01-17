@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2275013427922031187
+--- !u!114 &-1939519955211225822
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: beam
+  m_Name: plaster 1
   m_Shader: {fileID: 4800000, guid: 055eab4e84dc70a47ae75b3125a22de6, type: 3}
   m_ShaderKeywords: _BRDF_MODE_LAMBERT _FOG_ON _LIGHTING_BAKED_ON _LIGHTING_DYNAMIC_ON
     _SHADING_EVALUATION_MODE_PER_VERTEX _TEXTURE_FILTER_MODE_TEXTURE_IMPORT_SETTINGS
@@ -35,11 +35,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 5d1542bd5e049d94bba914f210fe4a70, type: 3}
+        m_Texture: {fileID: 2800000, guid: f913b132c761f0442b5657e6ccfeb234, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: ccd0b23a1a6905c40bcbb2c963040da1, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -51,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ba50918bfb0b26848a7053faab39f9ed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -63,11 +63,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5d1542bd5e049d94bba914f210fe4a70, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: f913b132c761f0442b5657e6ccfeb234, type: 3}
+        m_Scale: {x: 0.62, y: 0.62}
+        m_Offset: {x: 0, y: 0.59}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 3c30b77591c513249b936aba44f71f43, type: 3}
+        m_Texture: {fileID: 2800000, guid: 17e46e048f182cd48b702a46bf7f72a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -116,7 +116,7 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
-    - _DetailNormalMapScale: 1
+    - _DetailNormalMapScale: 0.2
     - _DoubleSidedNormalMode: 0
     - _DrawDistanceOverrideMode: 0
     - _DstBlend: 0
@@ -124,12 +124,12 @@ Material:
     - _EnvironmentReflections: 1
     - _FogWeight: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.258
     - _GlossyReflections: 1
     - _LightingBaked: 1
     - _LightingDynamic: 1
     - _LightingMode: 0
-    - _Metallic: 0
+    - _Metallic: 0.069
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -157,14 +157,14 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AlphaClippingScaleBiasMinMax: {r: 1, g: 0, b: 0, a: 1}
-    - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _BaseColor: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
+    - _Color: {r: 0.8235294, g: 0.8235294, b: 0.8235294, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _DrawDistanceOverride: {r: 100, g: 10000, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _PrecisionColorOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
-    - _PrecisionGeometryOverrideParameters: {r: 0.08597137, g: 11.63178, b: 0.41, a: 0}
+    - _PrecisionGeometryOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _UVAnimationParameters: {r: 1, g: 1, b: 0, a: 0}

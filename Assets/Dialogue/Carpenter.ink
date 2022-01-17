@@ -16,6 +16,7 @@ VAR church_letter = 0
 VAR town_anger = 0
 VAR ale_angry = 0
 VAR tosh_angry = 0
+VAR greg_seen_letter = 0
 
 
 ~_temp = 0
@@ -74,7 +75,7 @@ Brut: She killed herself.
         Brut: Nothing that night. Father Wright was with me and convinced me to go back to town eventually. I would be buried next to her if I hadn't.
         Brut: As soon as the sun came out we went back with Greg and John and... 
         Brut: ...She was so close... I might have even walked next to her the night before...
-        Brut: She wasn't as mauled as the others, Father Wright's presence must have scared the demon away before it could finish... Yet...
+        Brut: She wasn't as mauled as the others, Father Wright's presence must have scared the demon away before it could finish... And yet...
         (Brut seems distraught by the memories of that day.)
         ~brut_stress_0 = 1
 +   +   +   [I'm sorry you had to experience that.]
@@ -125,7 +126,8 @@ Brut: Yeah, what about it.
                 ->Joe_Interrogation
     +   +   +   [Do you have proof of this?]
                 Brut: His business was closed that entire day, which was odd for him. Didn't think much of it. But then it started to get dark, and Maria wasn't back from playing with Ale's son...
-                Brut: Then the next morning came and... God, if only I had paid him a visit...
+                Brut: Then the next morning came and... 
+                Brut: ...God, if only I had noticed earlier...
                 (Brut seems distraught by the memories of that day.)
                 ~brut_stress_1 = 1
                 ->Joe_Interrogation
@@ -164,7 +166,7 @@ Brut: Whatever.
 {brut_angry:
 ~town_anger++
 }
-{church_letter > 1:
+{greg_seen_letter:
 ~town_anger++
 }
 {ale_angry:
