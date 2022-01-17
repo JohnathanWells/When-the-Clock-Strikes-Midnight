@@ -305,3 +305,16 @@ Received Import Request.
 Start importing Assets/Scenes/Town.unity using Guid(8068b156ae848f442802aed337a81951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '207939d8580d98a5ffd35639ab40c5eb') in 0.190254 seconds
   Import took 0.217337 seconds .
 
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 3.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.6 MB.
+System memory in use after: 178.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3816.
+Total: 4.350400 ms (FindLiveObjects: 0.392600 ms CreateObjectMapping: 0.092700 ms MarkObjects: 3.565300 ms  DeleteObjects: 0.298500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
